@@ -17,7 +17,8 @@
                     (println "bb version:" (System/getProperty "babashka.version"))
                     (shell "bash" "-lc" "node --version || echo 'Node.js not found'")
                     (shell "bash" "-lc" "clojure -Sdescribe | head -n 3 || echo 'Clojure not found'")
-                    (shell "bash" "-lc" "npx vite --version || echo 'Vite not found'")
+                    (shell "bash" "-lc" "which svelte-check >/dev/null && svelte-check --version || echo 'svelte-check not found (install: nix-env -iA nixpkgs.nodePackages.svelte-check)'")
+                    (shell "bash" "-lc" "npx vite --version || echo 'Vite not found (npm-only: not in nixpkgs)'")
                     (shell "bash" "-lc" "clj-kondo --version || echo 'clj-kondo not found'")
                     (shell "bash" "-lc" "zprint --version || echo 'zprint not found'"))}
 
@@ -50,16 +51,63 @@
 
   build:phoenix-gen {:depends [phoenix:parse phoenix:spec phoenix:generate]}
 
-  serve:localhost {:doc "Serve for local contemplative development"
-                   :task (shell {:dir "web-grace"} "bash" "-lc" "npm pkg get name >/dev/null 2>&1 || npm init -y; npm i -D svelte @sveltejs/kit @sveltejs/adapter-auto vite; npm run dev")}
+  serve:localhost {:doc "Serve for local contemplative development (Nix-first, npm fallback)"
+                   :task (shell {:dir "web-grace"} "bash" "-lc" "
+                     echo '🌙 Checking Nix vs npm availability...';
+                     
+                     # Check if svelte-check is available from Nix
+                     if command -v svelte-check >/dev/null 2>&1; then
+                       echo '✅ svelte-check available from Nix';
+                     else 
+                       echo '📦 svelte-check not found (install: nix-env -iA nixpkgs.nodePackages.svelte-check)';
+                     fi;
+                     
+                     # Core packages not in nixpkgs - must use npm
+                     echo '📦 Installing npm-only packages (vite, @sveltejs/kit)...';
+                     npm pkg get name >/dev/null 2>&1 || npm init -y;
+                     npm i -D svelte @sveltejs/kit @sveltejs/adapter-auto vite;
+                     
+                     echo '🚀 Starting development server...';
+                     npm run dev
+                   ")}
 
   build:pages {:doc "Build static site for GitHub Pages community sharing"
-               :task (shell {:dir "web-grace"} "bash" "-lc" "BASE_PATH=/foolsgoldtoshi-star-pond-highdesert npx svelte-kit build")}
+               :task (shell {:dir "web-grace"} "bash" "-lc" "
+                 echo '🌙 Building for GitHub Pages with Nix-first approach...';
+                 
+                 # Use svelte-check from Nix if available
+                 if command -v svelte-check >/dev/null 2>&1; then
+                   echo '✅ Running svelte-check from Nix...';
+                   svelte-check --fail-on-warnings || echo 'svelte-check warnings detected';
+                 fi;
+                 
+                 # Build using npm (vite/sveltekit not in nixpkgs)
+                 echo '📦 Building with npm (vite/sveltekit npm-only)...';
+                 BASE_PATH=/foolsgoldtoshi-star-pond-highdesert npx svelte-kit build
+               ")}
 
   build:aws-server {:doc "Build NixOS container for AWS EKS production"
                     :task (shell "nix" "build" ".#aws-server-container")}
 
   build:all {:depends [build:phoenix-gen]}
+
+  nix:dev-shell {:doc "Enter Nix development shell with all sacred technology tools"
+                  :task (shell "bash" "-lc" "echo '🌙 Entering sacred Nix development shell...' && nix develop")}
+
+  nix:check-packages {:doc "Check which packages are available in Nix vs need npm"
+                      :task (do (println "🔍 Sacred Technology Package Availability:")
+                                (println "")
+                                (println "✅ Available in Nix (prefer these):")
+                                (shell "bash" "-lc" "command -v svelte-check && echo '  svelte-check (nix)' || echo '  svelte-check (missing)'")
+                                (shell "bash" "-lc" "command -v eslint && echo '  eslint (nix)' || echo '  eslint (missing)'") 
+                                (shell "bash" "-lc" "command -v prettier && echo '  prettier (nix)' || echo '  prettier (missing)'")
+                                (shell "bash" "-lc" "command -v typescript && echo '  typescript (nix)' || echo '  typescript (missing)'")
+                                (println "")
+                                (println "📦 NPM-only packages (not in nixpkgs):")
+                                (println "  vite (build tool)")
+                                (println "  @sveltejs/kit (framework)")
+                                (println "  @sveltejs/adapter-* (adapters)")
+                                (println "  svelte 5.39.6 (core framework)"))}
 
   ci:verify {:depends [doctor lint:kondo fmt:zprint test:spec build:phoenix-gen]}
 

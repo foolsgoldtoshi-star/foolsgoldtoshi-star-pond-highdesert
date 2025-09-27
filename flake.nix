@@ -8,12 +8,23 @@
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = [ 
+            # Core Clojure/Babashka toolchain
             pkgs.babashka 
             pkgs.clojure 
-            pkgs.nodejs_20 
+            pkgs.jdk17
             pkgs.zprint 
             pkgs.clj-kondo 
-            pkgs.jdk17 
+            
+            # Node.js runtime (required for npm fallbacks)
+            pkgs.nodejs_20 
+            
+            # Nix-available Node.js packages (prefer these over npm)
+            pkgs.nodePackages.svelte-check
+            pkgs.nodePackages.svelte-language-server
+            pkgs.nodePackages.eslint
+            pkgs.nodePackages.prettier
+            pkgs.nodePackages.typescript
+            pkgs.nodePackages.typescript-language-server
           ];
         };
       });
