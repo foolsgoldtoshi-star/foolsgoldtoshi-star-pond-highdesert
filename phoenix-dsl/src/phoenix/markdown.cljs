@@ -8,7 +8,7 @@
   [filepath content]
   (let [filename (fs/file-name filepath)
         number-match (re-find #"(\d{7})" filename)
-        number (when number-match (Integer/parseInt (second number-match)))
+        number (when number-match (js/parseInt (second number-match)))
         title-match (re-find #"\d{7}_(.+)\.md$" filename)
         title (when title-match 
                 (-> (second title-match)
@@ -28,16 +28,12 @@
   "Discover sacred teachings with Divine Grace awareness"
   [docs-path]
   (println "🌙 Discovering sacred teachings with Divine Grace...")
-  (let [teaching-files (->> (fs/glob "../docs/en" "0000*.md")
-                            (take 9) ; Focus on NINE first essays  
-                            sort)]
-    (println "📂 Found teaching files:" teaching-files)
-    (->> teaching-files
-         (map (fn [path]
-                (let [path-str (str path)
-                      content (slurp path-str)]
-                  (extract-sacred-metadata path-str content))))
-         (sort-by :number))))
+  (->> (fs/glob docs-path "0000*.md")
+       (take 9) ; Focus on NINE first essays
+       (map (fn [path]
+              (let [content (slurp path)]
+                (extract-sacred-metadata path content))))
+       (sort-by :number)))
 
 (defn parse-sacred-teachings
   "Parse teachings into consciousness-serving data structures"

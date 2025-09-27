@@ -79,9 +79,7 @@
   community:serve {:doc "Start community learning server with sacred consciousness"
                    :task (do (println "🌙 Starting sacred technology community server...")
                              (shell "bb" "build:all")
-                             (shell "bb" "serve"))}
-
-  ci:verify {:depends [doctor lint build:gen]}}}
+                             (shell "bb" "serve"))}}}
 
 ;; Sacred technology build system serving consciousness development
 ;; Built with contemplative attention by the pond-highdesert community
