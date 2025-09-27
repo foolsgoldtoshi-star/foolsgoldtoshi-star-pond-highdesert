@@ -198,4 +198,4 @@ Your simplicity consciousness develops through community service application, de
 
 ---
 
-**Simplicity Consciousness Navigation**: [← Previous: Sacred Git Version Consciousness](0000015_sacred_git_version_consciousness.md) | [Next: Immutable Data Meditation →](0000017_immutable_data_meditation.md) | [Advanced Design Philosophy →](0002100_advanced_design_philosophy.md)
+**Simplicity Consciousness Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: Sacred Git Version →](9999985_sacred_git_version_consciousness.md)
