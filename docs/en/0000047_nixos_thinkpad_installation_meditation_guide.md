@@ -4,7 +4,7 @@
 
 ---
 
-Sacred technologists! After Maya earned her laptop fund, built Faeb with Alex, and helped other young creators access technology tools, she realized her next learning adventure was mastering the operating system that would give her true technological sovereignty - NixOS. This guide approaches OS installation not as a stressful technical challenge, but as a meditative practice in creating reproducible, pure computing environments.
+Sacred technologists! After Maya earned her laptop fund, built Faeb with Alex using ClojureScript and AI-assisted development, and helped other young creators access technology tools, she realized her next learning adventure was mastering the operating system that would give her true technological sovereignty - NixOS. This guide approaches OS installation not as a stressful technical challenge, but as a meditative practice in creating reproducible, pure computing environments perfect for ClojureScript development and AI-assisted coding workflows.
 
 ## The Sacred Philosophy of NixOS 🌸💻
 
@@ -116,16 +116,19 @@ This file is your digital DNA - approach it with reverence:
   environment.systemPackages = with pkgs; [
     # Core development tools
     firefox chromium
-    vscodium # Open source Visual Studio Code
+    # Note: Install Cursor IDE manually from cursor.sh for Claude AI integration
     git nodejs python3
     
     # Creative applications
     gimp inkscape audacity
     libreoffice-fresh
     
-    # Guardian Dragon toolchain
-    babashka clojure
-    clj-kondo zprint
+    # Guardian Dragon functional programming toolchain
+    babashka clojure # ClojureScript 1.12.42 development
+    clj-kondo zprint # Code quality and formatting
+    
+    # Epub generation tools
+    pandoc calibre # For educational content creation
   ];
   
   # User configuration
@@ -299,7 +302,7 @@ As Maya completes her NixOS installation and reflects on this milestone in her t
 
 Her ThinkPad is no longer just a laptop - it's a sacred tool configured to serve her highest creative potential while connecting her to a global community of technologists who share her values of openness, sustainability, and mutual support.
 
-Tomorrow, Maya will begin exploring the vast ecosystem of NixOS packages and development environments, with dreams of making Faeb even more elegant and powerful. But tonight, she rests in the satisfaction of having created a computing foundation that truly serves her storytelling platform and creative goals.
+Tomorrow, Maya will begin exploring the vast ecosystem of NixOS packages and development environments, with dreams of making Faeb even more elegant using advanced ClojureScript features and expanding into epub generation for educational content. But tonight, she rests in the satisfaction of having created a computing foundation that perfectly supports AI-assisted functional programming and serves her storytelling platform's creative goals.
 
 ---
 
