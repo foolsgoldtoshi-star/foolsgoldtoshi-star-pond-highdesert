@@ -2,15 +2,34 @@
 <script>
   // Sample teachings data - will be replaced by phoenix generator
   export let teachings = [
-    {number: 1, title: "Humble technological wisdom offering", "guardian-dragon-consciousness": true, "sovereign-priority": false},
-    {number: 10, title: "Community infrastructure sovereign development", "guardian-dragon-consciousness": true, "sovereign-priority": true},
-    {number: 12, title: "Complete sacred computing sovereign curriculum", "guardian-dragon-consciousness": true, "sovereign-priority": true},
-    {number: 16, title: "Planetary network sovereign leadership", "guardian-dragon-consciousness": true, "sovereign-priority": true},
-    {number: 20, title: "Community infrastructure sovereign mastery", "guardian-dragon-consciousness": true, "sovereign-priority": true},
-    {number: 32, title: "Pranayama sovereign focused coding", "guardian-dragon-consciousness": true, "sovereign-priority": true},
-    {number: 34, title: "Lakshmi abundance sovereign meditation", "guardian-dragon-consciousness": true, "sovereign-priority": false},
-    {number: 39, title: "Firas zahabi sovereign relaxation coding", "guardian-dragon-consciousness": true, "sovereign-priority": false},
-    {number: 40, title: "Integrated guardian dragon sovereign practice", "guardian-dragon-consciousness": true, "sovereign-priority": false}
+    // Core Foundation Series (0-9)
+    {number: 0, title: "Sovereign monetary inquiry arrival", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "foundation"},
+    {number: 1, title: "Humble technological wisdom offering", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "foundation"},
+    {number: 2, title: "Sovereign devotional consciousness offering", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "foundation"},
+    {number: 3, title: "Sovereign community coordination wisdom", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "foundation"},
+    {number: 4, title: "Infinite consciousness expansion service", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "foundation"},
+    {number: 5, title: "Eternal consciousness sovereign service", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "foundation"},
+    {number: 6, title: "Infinite technology dharma sovereign service", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "foundation"},
+    {number: 7, title: "Cosmic technology sovereign preparation", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "foundation"},
+    {number: 8, title: "Planetary consciousness sovereign networks", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "foundation"},
+    {number: 9, title: "Regional network sovereign coordination", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "foundation"},
+    
+    // Spiritual Practice Series (31-40)
+    {number: 31, title: "Vipassana meditation sovereign guardian dragons", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "spiritual"},
+    {number: 32, title: "Pranayama sovereign focused coding", "guardian-dragon-consciousness": true, "sovereign-priority": true, category: "spiritual"},
+    {number: 33, title: "Kirtan sacred sound sovereign coding", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "spiritual"},
+    {number: 34, title: "Lakshmi abundance sovereign meditation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "spiritual"},
+    {number: 35, title: "Aditi creation sovereign meditation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "spiritual"},
+    {number: 36, title: "Apas water flow sovereign meditation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "spiritual"},
+    {number: 37, title: "Ido portal movement sovereign foundation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "movement"},
+    {number: 38, title: "Capoeira flow sovereign coders", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "movement"},
+    {number: 39, title: "Firas zahabi sovereign relaxation coding", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "movement"},
+    {number: 40, title: "Integrated guardian dragon sovereign practice", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "integration"},
+    
+    // 🎊 FEATURED: Sacred Coding Posture - Next Step! 🧘‍♀️💻
+    {number: 41, title: "Sacred coding sovereign posture", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment", featured: true},
+    {number: 42, title: "Firas zahabi advanced sovereign relaxation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment"},
+    {number: 43, title: "Integrated movement sovereign coding practice", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment"}
   ];
 </script>
 
@@ -22,10 +41,27 @@
 
   <div class="teachings-grid">
     {#each teachings as teaching}
-      <article class="teaching-card" class:guardian-dragon={teaching['guardian-dragon-consciousness']} class:sovereign={teaching['sovereign-priority']}>
+      <article class="teaching-card" 
+               class:guardian-dragon={teaching['guardian-dragon-consciousness']} 
+               class:sovereign={teaching['sovereign-priority']}
+               class:featured={teaching.featured}
+               class:foundation={teaching.category === 'foundation'}
+               class:spiritual={teaching.category === 'spiritual'}
+               class:movement={teaching.category === 'movement'}
+               class:integration={teaching.category === 'integration'}
+               class:embodiment={teaching.category === 'embodiment'}>
+        
+        {#if teaching.featured}
+          <div class="featured-banner">🎊 NEXT STEP 🧘‍♀️💻</div>
+        {/if}
+        
         <div class="card-number">{teaching.number.toString().padStart(7, '0')}</div>
         <h3 class="card-title">{teaching.title}</h3>
+        
         <div class="card-badges">
+          {#if teaching.category}
+            <span class="badge category {teaching.category}">{teaching.category}</span>
+          {/if}
           {#if teaching['guardian-dragon-consciousness']}
             <span class="badge guardian-dragon">🐲</span>
           {/if}
@@ -33,7 +69,14 @@
             <span class="badge sovereign">👑</span>
           {/if}
         </div>
-        <a href="/en/teaching/{teaching.number}" class="read-link">Read Teaching →</a>
+        
+        <a href="/en/teaching/{teaching.number}" class="read-link">
+          {#if teaching.featured}
+            🚀 Begin Sacred Practice →
+          {:else}
+            Read Teaching →
+          {/if}
+        </a>
       </article>
     {/each}
   </div>
@@ -137,6 +180,67 @@
   .badge.sovereign {
     background: linear-gradient(135deg, #6b46c1, #a855f7);
     color: white;
+  }
+
+  .badge.category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+  }
+
+  .badge.foundation {
+    background: linear-gradient(135deg, #065f46, #047857);
+    color: white;
+  }
+
+  .badge.spiritual {
+    background: linear-gradient(135deg, #7c2d12, #ea580c);
+    color: white;
+  }
+
+  .badge.movement {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: white;
+  }
+
+  .badge.integration {
+    background: linear-gradient(135deg, #7c2d12, #dc2626);
+    color: white;
+  }
+
+  .badge.embodiment {
+    background: linear-gradient(135deg, #581c87, #8b5cf6);
+    color: white;
+  }
+
+  .featured-banner {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    color: #2d1810;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 15px 15px 0 0;
+    transform: rotate(-1deg);
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+  }
+
+  .teaching-card.featured {
+    border: 3px solid #d4af37;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    transform: scale(1.02);
+    position: relative;
+    overflow: visible;
+  }
+
+  .teaching-card.featured:hover {
+    transform: scale(1.02) translateY(-8px);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.4);
   }
 
   .read-link {

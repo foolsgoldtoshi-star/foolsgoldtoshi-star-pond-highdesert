@@ -51,7 +51,7 @@
   build:phoenix-gen {:depends [phoenix:parse phoenix:spec phoenix:generate]}
 
   serve:localhost {:doc "Serve for local contemplative development"
-                   :task (shell {:dir "web-grace"} "bash" "-lc" "npm pkg get name >/dev/null 2>&1 || npm init -y; npm i -D svelte @sveltejs/kit @sveltejs/adapter-auto vite; npx svelte-kit dev")}
+                   :task (shell {:dir "web-grace"} "bash" "-lc" "npm pkg get name >/dev/null 2>&1 || npm init -y; npm i -D svelte @sveltejs/kit @sveltejs/adapter-auto vite; npm run dev")}
 
   build:pages {:doc "Build static site for GitHub Pages community sharing"
                :task (shell {:dir "web-grace"} "bash" "-lc" "BASE_PATH=/foolsgoldtoshi-star-pond-highdesert npx svelte-kit build")}

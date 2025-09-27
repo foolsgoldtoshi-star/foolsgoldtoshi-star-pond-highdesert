@@ -29,8 +29,9 @@
   [docs-path]
   (println "🌙 Discovering sacred teachings with Divine Grace...")
   (let [teaching-files (->> (fs/glob "../docs/en" "0000*.md")
-                            (take 9) ; Focus on NINE first essays  
-                            sort)]
+                            sort
+                            (take 50) ; Include full Guardian Dragon foundation series (0000-0000043)
+                            )]
     (println "📂 Found teaching files:" teaching-files)
     (->> teaching-files
          (map (fn [path]

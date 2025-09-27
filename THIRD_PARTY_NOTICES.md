@@ -8,6 +8,7 @@ This project includes or depends upon the following third-party libraries and to
 - **Copyright**: Rich Hickey and contributors
 
 ## Svelte
+- **Version**: 5.39.6
 - **License**: MIT License
 - **Source**: https://github.com/sveltejs/svelte
 - **Copyright**: Rich Harris and contributors
