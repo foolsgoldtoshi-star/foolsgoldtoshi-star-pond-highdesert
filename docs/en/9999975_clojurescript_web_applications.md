@@ -184,4 +184,4 @@ Your ClojureScript web consciousness develops through community application crea
 
 ---
 
-**ClojureScript Web Navigation**: [← Previous: HumbleUI Community Tools](0000024_clojurescript_svelte_harmony.md) | [Next: Advanced Community Web Systems →](0000032_advanced_community_web_systems.md) | [Full-Stack Consciousness →](0001800_fullstack_consciousness_development.md)
+**ClojureScript Web Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: ClojureScript Harmony →](9999976_clojurescript_svelte_harmony.md)
