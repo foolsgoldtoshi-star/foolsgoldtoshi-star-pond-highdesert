@@ -4,170 +4,73 @@
             [phoenix.markdown :as md]
             [phoenix.spec :as spec]))
 
-(defn teaching-to-component-name
-  "Convert teaching title to Svelte component name"
-  [title]
+;; Pure string transformation pipeline
+(defn sanitize-title [title]
   (-> title
       (str/replace #"[^a-zA-Z0-9\s]" "")
       (str/replace #"\s+" "_")
       (str/replace #"_+" "_")
-      str/trim
-      (#(str "Teaching_" %))))
+      str/trim))
+
+(defn teaching-to-component-name [title]
+  (str "Teaching_" (sanitize-title title)))
+
+;; Decomposed template generation - simple, composable functions
+(defn build-script-section [{:keys [title number guardian-dragon-consciousness sovereign-priority]}]
+  (str "<script>\n"
+       "  export let title = \"" title "\";\n"
+       "  export let number = " number ";\n"
+       "  export let guardianDragon = " guardian-dragon-consciousness ";\n"
+       "  export let sovereign = " sovereign-priority ";\n"
+       "</script>"))
+
+(defn build-markup-section []
+  (str "<article class=\"sacred-teaching\" class:guardian-dragon={guardianDragon} class:sovereign={sovereign}>\n"
+       "  <header class=\"teaching-header\">\n"
+       "    <div class=\"teaching-number\">{number:0>7}</div>\n"
+       "    <h1 class=\"teaching-title\">{title}</h1>\n"
+       "    <div class=\"teaching-badges\">\n"
+       "      {#if guardianDragon}\n"
+       "        <span class=\"badge guardian-dragon\">🐲 Guardian Dragon</span>\n"
+       "      {/if}\n"
+       "      {#if sovereign}\n"
+       "        <span class=\"badge sovereign\">👑 Sovereign</span>\n"
+       "      {/if}\n"
+       "    </div>\n"
+       "  </header>\n\n"
+       "  <section class=\"teaching-content\">\n"
+       "    <div class=\"markdown-content\">\n"
+       "      {@html content}\n"
+       "    </div>\n"
+       "  </section>\n\n"
+       "  <footer class=\"teaching-footer\">\n"
+       "    <div class=\"teaching-navigation\">\n"
+       "      <a href=\"/en/teachings\" class=\"back-link\">← All Teachings</a>\n"
+       "      <div class=\"sharing\">\n"
+       "        <button class=\"share-btn\" title=\"Share this sacred teaching\">\n"
+       "          🔗 Share\n"
+       "        </button>\n"
+       "      </div>\n"
+       "    </div>\n"
+       "  </footer>\n"
+       "</article>"))
+
+(defn build-style-section []
+  (slurp "../phoenix-dsl/templates/teaching-styles.css"))
+
+(defn assemble-component [teaching]
+  (str "<!-- Generated Sacred Teaching Component with Divine Grace -->\\n"
+       (build-script-section teaching) "\\n\\n"
+       (build-markup-section) "\\n\\n"
+       "<style>\\n" (build-style-section) "</style>\\n"))
 
 (defn generate-teaching-component
-  "Generate a beautiful Svelte component for a sacred teaching"
+  \"Pure function: compose component from small parts\"
   [teaching]
-  (let [component-name (teaching-to-component-name (:title teaching))
-        title (:title teaching)
-        content (:content teaching)
-        number (:number teaching)
-        has-guardian-dragon? (:guardian-dragon-consciousness teaching)
-        is-sovereign? (:sovereign-priority teaching)]
+  (let [component-name (teaching-to-component-name (:title teaching))]
     {:component-name component-name
-     :file-path (str "../web-grace/src/lib/generated/" component-name ".svelte")
-     :content (str "<!-- Generated Sacred Teaching Component with Divine Grace -->\n"
-                   "<script>\n"
-                   "  export let title = \"" title "\";\n"
-                   "  export let number = " number ";\n"
-                   "  export let guardianDragon = " (if has-guardian-dragon? "true" "false") ";\n"
-                   "  export let sovereign = " (if is-sovereign? "true" "false") ";\n"
-                   "</script>\n\n"
-                   "<article class=\"sacred-teaching\" class:guardian-dragon={guardianDragon} class:sovereign={sovereign}>\n"
-                   "  <header class=\"teaching-header\">\n"
-                   "    <div class=\"teaching-number\">{number:0>7}</div>\n"
-                   "    <h1 class=\"teaching-title\">{title}</h1>\n"
-                   "    <div class=\"teaching-badges\">\n"
-                   "      {#if guardianDragon}\n"
-                   "        <span class=\"badge guardian-dragon\">🐲 Guardian Dragon</span>\n"
-                   "      {/if}\n"
-                   "      {#if sovereign}\n"
-                   "        <span class=\"badge sovereign\">👑 Sovereign</span>\n"
-                   "      {/if}\n"
-                   "    </div>\n"
-                   "  </header>\n\n"
-                   "  <section class=\"teaching-content\">\n"
-                   "    <!-- Sacred content rendered with Divine Grace -->\n"
-                   "    <div class=\"markdown-content\">\n"
-                   "      {@html content}\n"
-                   "    </div>\n"
-                   "  </section>\n\n"
-                   "  <footer class=\"teaching-footer\">\n"
-                   "    <div class=\"teaching-navigation\">\n"
-                   "      <a href=\"/en/teachings\" class=\"back-link\">← All Teachings</a>\n"
-                   "      <div class=\"sharing\">\n"
-                   "        <button class=\"share-btn\" title=\"Share this sacred teaching\">\n"
-                   "          🔗 Share\n"
-                   "        </button>\n"
-                   "      </div>\n"
-                   "    </div>\n"
-                   "  </footer>\n"
-                   "</article>\n\n"
-                   "<style>\n"
-                   "  .sacred-teaching {\n"
-                   "    max-width: 800px;\n"
-                   "    margin: 0 auto;\n"
-                   "    padding: 2rem;\n"
-                   "    font-family: 'Crimson Text', serif;\n"
-                   "    line-height: 1.6;\n"
-                   "    color: var(--text-color, #2d3748);\n"
-                   "  }\n\n"
-                   "  .teaching-header {\n"
-                   "    text-align: center;\n"
-                   "    margin-bottom: 3rem;\n"
-                   "    padding-bottom: 2rem;\n"
-                   "    border-bottom: 2px solid var(--sage-green, #87a96b);\n"
-                   "  }\n\n"
-                   "  .teaching-number {\n"
-                   "    font-size: 1.2rem;\n"
-                   "    color: var(--jade-aquamarine, #4a9b8e);\n"
-                   "    font-weight: 600;\n"
-                   "    margin-bottom: 0.5rem;\n"
-                   "  }\n\n"
-                   "  .teaching-title {\n"
-                   "    font-size: 2.5rem;\n"
-                   "    margin: 0.5rem 0;\n"
-                   "    color: var(--deep-forest, #2d5016);\n"
-                   "    text-transform: capitalize;\n"
-                   "  }\n\n"
-                   "  .teaching-badges {\n"
-                   "    display: flex;\n"
-                   "    justify-content: center;\n"
-                   "    gap: 1rem;\n"
-                   "    margin-top: 1rem;\n"
-                   "  }\n\n"
-                   "  .badge {\n"
-                   "    padding: 0.5rem 1rem;\n"
-                   "    border-radius: 20px;\n"
-                   "    font-size: 0.9rem;\n"
-                   "    font-weight: 600;\n"
-                   "  }\n\n"
-                   "  .badge.guardian-dragon {\n"
-                   "    background: linear-gradient(135deg, #d4af37, #ffd700);\n"
-                   "    color: #2d1810;\n"
-                   "  }\n\n"
-                   "  .badge.sovereign {\n"
-                   "    background: linear-gradient(135deg, #6b46c1, #a855f7);\n"
-                   "    color: white;\n"
-                   "  }\n\n"
-                   "  .teaching-content {\n"
-                   "    margin-bottom: 3rem;\n"
-                   "  }\n\n"
-                   "  .markdown-content {\n"
-                   "    font-size: 1.1rem;\n"
-                   "    line-height: 1.8;\n"
-                   "  }\n\n"
-                   "  .teaching-footer {\n"
-                   "    border-top: 2px solid var(--sage-green, #87a96b);\n"
-                   "    padding-top: 2rem;\n"
-                   "  }\n\n"
-                   "  .teaching-navigation {\n"
-                   "    display: flex;\n"
-                   "    justify-content: space-between;\n"
-                   "    align-items: center;\n"
-                   "  }\n\n"
-                   "  .back-link {\n"
-                   "    color: var(--jade-aquamarine, #4a9b8e);\n"
-                   "    text-decoration: none;\n"
-                   "    font-weight: 600;\n"
-                   "    transition: color 0.3s ease;\n"
-                   "  }\n\n"
-                   "  .back-link:hover {\n"
-                   "    color: var(--sage-green, #87a96b);\n"
-                   "  }\n\n"
-                   "  .share-btn {\n"
-                   "    background: var(--jade-aquamarine, #4a9b8e);\n"
-                   "    color: white;\n"
-                   "    border: none;\n"
-                   "    padding: 0.5rem 1rem;\n"
-                   "    border-radius: 20px;\n"
-                   "    cursor: pointer;\n"
-                   "    transition: background 0.3s ease;\n"
-                   "  }\n\n"
-                   "  .share-btn:hover {\n"
-                   "    background: var(--sage-green, #87a96b);\n"
-                   "  }\n\n"
-                   "  /* Guardian Dragon styling */\n"
-                   "  .sacred-teaching.guardian-dragon {\n"
-                   "    border: 3px solid var(--gold, #d4af37);\n"
-                   "    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);\n"
-                   "  }\n\n"
-                   "  /* Sovereign styling */\n"
-                   "  .sacred-teaching.sovereign {\n"
-                   "    border: 3px solid var(--royal-purple, #6b46c1);\n"
-                   "    box-shadow: 0 0 20px rgba(107, 70, 193, 0.3);\n"
-                   "  }\n\n"
-                   "  /* Dark theme support */\n"
-                   "  @media (prefers-color-scheme: dark) {\n"
-                   "    .sacred-teaching {\n"
-                   "      color: #e2e8f0;\n"
-                   "      background: #1a202c;\n"
-                   "    }\n"
-                   "    \n"
-                   "    .teaching-title {\n"
-                   "      color: #a7f3d0;\n"
-                   "    }\n"
-                   "  }\n"
-                   "</style>\n")}))
+     :file-path (str \"../web-grace/src/lib/generated/\" component-name \".svelte\")
+     :content (assemble-component teaching)})))
 
 (defn generate-index-component
   "Generate index component listing all sacred teachings"
@@ -256,31 +159,50 @@
                  "  }\n"
                  "</style>\n")})
 
+;; Separated side effects - pure I/O operations
+(defn ensure-directory [file-path]
+  (let [dir (-> file-path (str/split #"/") butlast (->> (str/join "/")))]
+    (.mkdirSync (js/require "fs") dir #js {:recursive true})
+    dir))
+
+(defn write-file [file-path content]
+  (spit file-path content))
+
 (defn write-component-to-file
-  "Write Svelte component to file system"
+  "Side effect: write component to filesystem"
   [component]
-  (let [dir (-> (:file-path component) 
-                (str/split #"/") 
-                butlast 
-                (->> (str/join "/")))]
-    (println "📝 Creating directory:" dir)
-    (js/require "fs").mkdirSync dir #js {:recursive true})
-    (println "✨ Writing component:" (:component-name component))
-    (spit (:file-path component) (:content component))
-    component))
+  (println "📝 Creating directory for:" (:component-name component))
+  (ensure-directory (:file-path component))
+  (println "✨ Writing component:" (:component-name component))
+  (write-file (:file-path component) (:content component))
+  component)
+
+;; Functional pipeline - data transformation separated from I/O
+(defn transform-teachings [teachings]
+  "Pure function: transform teachings into component data"
+  (map generate-teaching-component teachings))
+
+(defn add-index-component [teaching-components teachings]
+  "Pure function: add index component to collection"
+  (conj teaching-components (generate-index-component teachings)))
+
+(defn write-all-components [components]
+  "Side effect: write all components to filesystem"
+  (doseq [component components]
+    (write-component-to-file component))
+  components)
 
 (defn generate-all-components
-  "Generate all Svelte components from sacred teachings"
+  "Compose pipeline: transform data then perform I/O"
   [teachings]
   (println "🌙 Generating Divine Grace Svelte components...")
-  (let [teaching-components (map generate-teaching-component teachings)
-        index-component (generate-index-component teachings)
-        all-components (conj teaching-components index-component)]
-    (println "📊 Generated" (count all-components) "components")
-    (doseq [component all-components]
-      (write-component-to-file component))
+  (let [components (->> teachings
+                        transform-teachings
+                        (add-index-component teachings))]
+    (println "📊 Generated" (count components) "components")
+    (write-all-components components)
     (println "🎊 All Divine Grace components generated!")
-    all-components))
+    components))
 
 (defn -main
   "Sacred Svelte generation entry point"

@@ -3,41 +3,51 @@
   (:require [clojure.string :as str]
             [babashka.fs :as fs]))
 
+;; Pure data transformation functions (no side effects)
+(defn parse-number [filename]
+  (when-let [match (re-find #"(\d{7})" filename)]
+    (Integer/parseInt (second match))))
+
+(defn parse-title [filename]
+  (when-let [match (re-find #"\d{7}_(.+)\.md$" filename)]
+    (-> (second match)
+        (str/replace "_" " ")
+        (str/replace "-" " ")
+        str/capitalize)))
+
+(defn classify-content [content]
+  {:sovereign-priority (str/includes? content "sovereign")
+   :guardian-dragon-consciousness (str/includes? content "Guardian Dragon")})
+
 (defn extract-sacred-metadata
-  "Extract sacred teaching metadata from filename and content"
+  "Pure function: extract metadata from filepath and content"
   [filepath content]
-  (let [filename (fs/file-name filepath)
-        number-match (re-find #"(\d{7})" filename)
-        number (when number-match (Integer/parseInt (second number-match)))
-        title-match (re-find #"\d{7}_(.+)\.md$" filename)
-        title (when title-match 
-                (-> (second title-match)
-                    (str/replace "_" " ")
-                    (str/replace "-" " ")
-                    str/capitalize))
-        sovereign? (str/includes? content "sovereign")
-        guardian-dragon? (str/includes? content "Guardian Dragon")]
-    {:number number
-     :title title
-     :content content
-     :filepath filepath
-     :sovereign-priority sovereign?
-     :guardian-dragon-consciousness guardian-dragon?}))
+  (let [filename (fs/file-name filepath)]
+    (merge {:number (parse-number filename)
+            :title (parse-title filename)
+            :content content
+            :filepath filepath}
+           (classify-content content))))
+
+;; Pure functions for file discovery and processing
+(defn find-teaching-files [docs-path pattern limit]
+  (->> (fs/glob docs-path pattern)
+       sort
+       (take limit)))
+
+(defn load-and-parse [path]
+  (let [path-str (str path)
+        content (slurp path-str)]
+    (extract-sacred-metadata path-str content)))
 
 (defn discover-teachings
-  "Discover sacred teachings with Divine Grace awareness"
+  "Discover sacred teachings with functional composition"
   [docs-path]
   (println "🌙 Discovering sacred teachings with Divine Grace...")
-  (let [teaching-files (->> (fs/glob "../docs/en" "0000*.md")
-                            sort
-                            (take 50) ; Include full Guardian Dragon foundation series (0000-0000043)
-                            )]
+  (let [teaching-files (find-teaching-files "../docs/en" "0000*.md" 50)]
     (println "📂 Found teaching files:" teaching-files)
     (->> teaching-files
-         (map (fn [path]
-                (let [path-str (str path)
-                      content (slurp path-str)]
-                  (extract-sacred-metadata path-str content))))
+         (map load-and-parse)
          (sort-by :number))))
 
 (defn parse-sacred-teachings
