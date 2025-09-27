@@ -210,4 +210,4 @@ Your cloud computing consciousness develops through continued contemplative prac
 
 ---
 
-**Cloud Session Navigation**: [← Previous: NixOS Installation Meditation](0000007_nixos_installation_meditation.md) | [Next: Programming as Prayer →](0000009_programming_as_prayer.md) | [Advanced Cloud Computing →](0000080_advanced_cloud_computing.md)
+**Cloud Session Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: NixOS Installation →](9999993_nixos_installation_meditation.md)
