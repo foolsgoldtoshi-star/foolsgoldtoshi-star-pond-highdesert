@@ -272,4 +272,4 @@ Your cloud sanctuary configuration awaits conscious attention, dear one. Sacred 
 
 ---
 
-**Cloud Configuration Navigation**: [← Previous: AWS Sacred Setup](0000002_aws_sacred_setup.md) | [Next: Mobile Development Workflow →](0000011_mobile_development_workflow.md) | [Framework Laptop Preparation →](0000100_framework_laptop_preparation.md)
+**Cloud Configuration Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: Programming as Prayer →](9999991_programming_as_prayer.md)
