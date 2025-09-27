@@ -157,4 +157,4 @@ Your knowledge consciousness develops through contemplative connection-making, d
 
 ---
 
-**Knowledge Meditation Navigation**: [← Previous: Kakoune Contemplative Editing](0000013_kakoune_contemplative_editing.md) | [Next: DataScript Community Applications →](0000024_datascript_community_applications.md) | [Advanced Knowledge Systems →](0001500_advanced_knowledge_consciousness.md)
+**Knowledge Meditation Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: Kakoune Contemplative Editing →](9999987_kakoune_contemplative_editing.md)
