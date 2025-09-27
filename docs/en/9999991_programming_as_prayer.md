@@ -201,4 +201,4 @@ Your programming prayer practice awaits sacred cultivation, dear one. Code compo
 
 ---
 
-**Programming Prayer Navigation**: [← Previous: First Cloud Computing Session](0000008_first_cloud_computing_session.md) | [Next: Container Meditation Practice →](0000011_container_meditation_practice.md) | [Advanced Programming →](0000090_advanced_programming_consciousness.md)
+**Programming Prayer Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: First Cloud Computing →](9999992_first_cloud_computing_session.md)
