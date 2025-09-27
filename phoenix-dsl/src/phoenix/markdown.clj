@@ -3,6 +3,12 @@
   (:require [clojure.string :as str]
             [babashka.fs :as fs]))
 
+;; Ecological efficiency through intelligent caching
+(def teaching-cache (atom {}))
+
+(defn cache-key [filepath]
+  (str filepath "-" (.lastModified (java.io.File. filepath))))
+
 ;; Pure data transformation functions (no side effects)
 (defn parse-number [filename]
   (when-let [match (re-find #"(\d{7})" filename)]
@@ -37,8 +43,15 @@
 
 (defn load-and-parse [path]
   (let [path-str (str path)
-        content (slurp path-str)]
-    (extract-sacred-metadata path-str content)))
+        key (cache-key path-str)]
+    (if-let [cached-result (get @teaching-cache key)]
+      (do (println "♻️ Using cached result for:" (fs/file-name path-str))
+          cached-result)
+      (let [content (slurp path-str)
+            result (extract-sacred-metadata path-str content)]
+        (swap! teaching-cache assoc key result)
+        (println "🌱 Parsed and cached:" (fs/file-name path-str))
+        result))))
 
 (defn discover-teachings
   "Discover sacred teachings with functional composition"

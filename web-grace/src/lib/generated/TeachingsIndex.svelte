@@ -28,8 +28,11 @@
     
     // 🧘‍♀️ EMBODIMENT MASTERY SERIES 🥋
     {number: 41, title: "Sacred coding sovereign posture", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment", completed: true},
-    {number: 42, title: "Firas zahabi advanced sovereign relaxation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment", featured: true},
-    {number: 43, title: "Integrated movement sovereign coding practice", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment"}
+    {number: 42, title: "Firas zahabi advanced sovereign relaxation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment", completed: true},
+    {number: 43, title: "Integrated movement sovereign coding practice", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment"},
+    
+    // 🌟 INSPIRING STORIES SERIES 📖
+    {number: 44, title: "Sixteen year old alternative path discovery", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "story", featured: true}
   ];
 </script>
 
@@ -216,6 +219,11 @@
 
   .badge.embodiment {
     background: linear-gradient(135deg, #581c87, #8b5cf6);
+    color: white;
+  }
+
+  .badge.story {
+    background: linear-gradient(135deg, #be123c, #f43f5e);
     color: white;
   }
 

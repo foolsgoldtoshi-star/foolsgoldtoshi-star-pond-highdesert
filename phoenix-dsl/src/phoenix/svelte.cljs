@@ -55,8 +55,15 @@
        "  </footer>\n"
        "</article>"))
 
+;; Memoized style loading for ecological efficiency
+(def style-cache (atom nil))
+
 (defn build-style-section []
-  (slurp "../phoenix-dsl/templates/teaching-styles.css"))
+  (if-let [cached-styles @style-cache]
+    cached-styles
+    (let [styles (slurp "../phoenix-dsl/templates/teaching-styles.css")]
+      (reset! style-cache styles)
+      styles)))
 
 (defn assemble-component [teaching]
   (str "<!-- Generated Sacred Teaching Component with Divine Grace -->\\n"
