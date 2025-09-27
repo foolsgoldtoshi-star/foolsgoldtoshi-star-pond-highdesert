@@ -240,4 +240,4 @@ Your contemplative editing and knowledge consciousness await gentle cultivation,
 
 ---
 
-**Contemplative Editing Navigation**: [← Previous: Home Manager User Sovereignty](0000012_home_manager_user_sovereignty.md) | [Next: Logseq Knowledge Meditation →](0000014_logseq_knowledge_meditation.md) | [DataScript Applications →](0000024_datascript_community_applications.md)
+**Contemplative Editing Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: Home Manager Sovereignty →](9999988_home_manager_user_sovereignty.md)
