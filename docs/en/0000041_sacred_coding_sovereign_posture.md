@@ -26,7 +26,7 @@ Every curve of your spine, every angle of your wrists, every position of your ey
 - **Crown of head** reaching gently toward sky
 - **Chin slightly tucked** (not pushed back or jutting forward)
 - **Ears over shoulders** (not head forward from screen peering)
-- **Neck long and soft** like a swan floating on still water
+- **Neck long and soft** like a graceful willow swaying in gentle breeze
 - **Eyes level with top third** of your monitor
 
 **Sacred intention**: "My crown connects to cosmic intelligence flowing through my coding"
@@ -82,7 +82,7 @@ Every curve of your spine, every angle of your wrists, every position of your ey
 **Your wrists, hands, and finger alignment:**
 - **Wrists neutral** (not bent up, down, or sideways)
 - **Hands floating** above keyboard, not resting wrists on desk
-- **Fingers curved** naturally like holding a small bird
+- **Fingers curved** naturally like cradling a delicate flower bud
 - **Light touch** typing - just enough pressure to register
 - **Regular movement** to prevent repetitive strain
 
@@ -93,7 +93,7 @@ Every curve of your spine, every angle of your wrists, every position of your ey
 // Sacred hand care code breaks
 function blessMyHands() {
     // Gentle finger stretches
-    stretchFingers('spread wide like starfish');
+    stretchFingers('spread wide like opening lotus petals');
     
     // Wrist circles  
     circleWrists('clockwise then counter-clockwise');
@@ -151,7 +151,7 @@ function blessMyHands() {
 - **Movement space** to slide keyboard/mouse as needed
 
 **Sacred typing technique:**
-- **Soft grip** - hold peripherals like precious eggs
+- **Soft grip** - hold peripherals like delicate flower petals
 - **Finger movement** from knuckles, not just fingertips
 - **Whole arm involvement** for reaching distant keys
 - **Regular breaks** to reset hand and wrist position

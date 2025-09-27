@@ -1,6 +1,6 @@
 # Teaching Friends AWS Kubernetes CDN Magic 🌐🚀💻
 
-*"Give a person a fish and you feed them for a day; teach a person to fish and you feed them for a lifetime." - Chinese Proverb*
+*"Give a person a seed and you feed them for a day; teach a person to garden and you feed them for a lifetime." - Plant-Based Wisdom*
 
 ---
 
