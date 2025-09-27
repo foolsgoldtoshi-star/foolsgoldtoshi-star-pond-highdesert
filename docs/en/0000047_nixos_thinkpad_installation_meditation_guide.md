@@ -4,7 +4,7 @@
 
 ---
 
-Sacred technologists! After Maya earned her laptop fund and helped other young creators access technology tools, she realized her next learning adventure was mastering the operating system that would give her true technological sovereignty - NixOS. This guide approaches OS installation not as a stressful technical challenge, but as a meditative practice in creating reproducible, pure computing environments.
+Sacred technologists! After Maya earned her laptop fund, built Faeb with Alex, and helped other young creators access technology tools, she realized her next learning adventure was mastering the operating system that would give her true technological sovereignty - NixOS. This guide approaches OS installation not as a stressful technical challenge, but as a meditative practice in creating reproducible, pure computing environments.
 
 ## The Sacred Philosophy of NixOS 🌸💻
 
@@ -206,7 +206,7 @@ Configure your user environment declaratively:
   programs.git = {
     enable = true;
     userName = "Maya";
-    userEmail = "maya@harmonyhuub.example";
+    userEmail = "maya@faeb.example";
   };
   
   # Shell environment for productive terminal work
@@ -299,7 +299,7 @@ As Maya completes her NixOS installation and reflects on this milestone in her t
 
 Her ThinkPad is no longer just a laptop - it's a sacred tool configured to serve her highest creative potential while connecting her to a global community of technologists who share her values of openness, sustainability, and mutual support.
 
-Tomorrow, Maya will begin exploring the vast ecosystem of NixOS packages and development environments. But tonight, she rests in the satisfaction of having created a computing foundation that truly serves her learning and creative goals.
+Tomorrow, Maya will begin exploring the vast ecosystem of NixOS packages and development environments, with dreams of making Faeb even more elegant and powerful. But tonight, she rests in the satisfaction of having created a computing foundation that truly serves her storytelling platform and creative goals.
 
 ---
 

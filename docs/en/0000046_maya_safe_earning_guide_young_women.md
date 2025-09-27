@@ -188,7 +188,7 @@ Remember:
 - **Celebrate progress** - every dollar earned is a step toward your goal
 - **Trust the process** - consistent effort over time creates remarkable results
 
-Maya started with curiosity about web development and ended up not only with her own laptop, but with the skills and confidence to build technology that serves her community. Your path will be uniquely yours, but the principles of safety, consistency, and service will guide you to success.
+Maya started with curiosity about web development and ended up not only with her own laptop, but with the skills and confidence to build Faeb - a storytelling platform that serves her creative community. Your path will be uniquely yours, but the principles of safety, consistency, and service will guide you to success.
 
 The laptop you earn won't just be a tool - it'll be a symbol of your capability, resourcefulness, and commitment to your own growth and dreams.
 
