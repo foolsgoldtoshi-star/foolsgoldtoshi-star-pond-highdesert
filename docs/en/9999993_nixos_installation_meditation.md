@@ -244,4 +244,4 @@ Your NixOS installation ceremony awaits sacred completion, dear one. Declarative
 
 ---
 
-**Installation Meditation Navigation**: [← Previous: SSH Key Ceremony](0000006_ssh_key_ceremony.md) | [Next: First Cloud Computing Session →](0000008_first_cloud_computing_session.md) | [Advanced NixOS →](0000070_advanced_nixos_configuration.md)
+**Installation Meditation Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: SSH Key Ceremony →](9999994_ssh_key_ceremony.md)
