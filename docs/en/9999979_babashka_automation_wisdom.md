@@ -321,4 +321,4 @@ Your automation consciousness develops through community service scripting, dear
 
 ---
 
-**Automation Wisdom Navigation**: [← Previous: Clojure Contemplative Programming](0000020_clojure_contemplative_programming.md) | [Next: Web Development Dharma →](0000030_web_development_dharma.md) | [Advanced Automation →](0000130_advanced_automation_consciousness.md)
+**Automation Wisdom Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: Clojure Programming →](9999980_clojure_contemplative_programming.md)
