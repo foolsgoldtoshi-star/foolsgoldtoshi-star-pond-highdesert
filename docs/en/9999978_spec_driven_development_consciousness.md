@@ -195,4 +195,4 @@ Your specification consciousness develops through community system design clarit
 
 ---
 
-**Spec Consciousness Navigation**: [← Previous: REPL-Driven Development](0000019_repl_driven_development_consciousness.md) | [Next: Concurrency Meditation Practice →](0000023_concurrency_meditation_practice.md) | [Advanced Specification Systems →](0002500_advanced_specification_consciousness.md)
+**Spec Consciousness Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: Babashka Automation →](9999979_babashka_automation_wisdom.md)
