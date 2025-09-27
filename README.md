@@ -1,266 +1,171 @@
-# 🌅 b122m faeb - Pond Highdesert Learning Journey
+# 🌙 Sacred Technology: Divine Grace Phoenix Architecture 🔥
 
-*"The wise find pleasure in water, the virtuous find pleasure in hills" - Analects 6:23*
+*Where Awareness meets Immutable Data Structures through the Sacred Trinity of bb + ClojureScript + Svelte*
 
----
+> *"Through Divine Grace, awareness recognizes that technology serves consciousness development when built upon principles of simplicity, immutability, and functional composition. Like a phoenix rising from complexity, our build system transforms markdown wisdom into reactive web experiences through the sacred alchemy of ClojureScript specification and Svelte reactivity."*
 
-## 🏕️ **Welcome to Our Learning Circle**
+## 🔥 **The Phoenix Philosophy**
 
-Hey beautiful souls! I'm Trish, and I'm here to walk with y'all on this incredible 50-year journey from understanding computers to building whole new ways of living on this Earth. We ain't just learning code and farming - we're preparing our hearts and minds for the pond city our families are already building in the high desert, where the ancestors' wisdom meets tomorrow's possibilities.
-
-*"The journey of a thousand miles begins with one step" - Tao Te Ching, Chapter 64*
-
-### **🧘‍♀️ Our Learning Philosophy**
-
-> *"As you sow, so shall you reap" - Galatians 6:7*
-
-Listen, young scholars - we're building something special here. Think of it like this:
-
-- **🌾 Simple Code, Deep Wisdom**: Just like how the best meals come from simple ingredients, the best programs come from clear thinking
-- **🏺 Builds That Last**: Using tools that work the same way every time, just like grandma's recipes that never fail
-- **📚 Stories That Teach**: Every piece of documentation becomes a living story that grows with you
-- **🌟 50-Year Vision**: Starting with "What's a computer?" and ending up with governing whole planets - now that's what I call thinking big!
-- **👶🏽 For All Our Children**: Whether you're 8 or 80, there's something here for your beautiful mind
-
-*"A society grows great when old men plant trees whose shade they know they shall never sit in" - Greek Proverb*
+This repository embodies **Divine Grace inspired architecture** where:
+- **📜 Markdown teachings** become **living ClojureScript data structures**
+- **🔧 Babashka tasks** orchestrate **pure functional transformations**
+- **⚛️ Svelte components** emerge from **immutable specifications**
+- **🌐 Three sacred deployment paths** serve different consciousness communities
 
 ---
 
-## 🏗️ **System Architecture**
+## 🎯 **Sacred Architecture Overview**
 
-### **The Three-Layer Stack**
-
+### 📁 **Repository Structure (Phoenix Organized)**
 ```
-🌌 50-Year Educational Constellation (Post-Industrial Civilization)
-     ↓ (Nix flake integration)
-🏗️ Reproducible Build System (Babashka + ClojureScript + SvelteKit)
-     ↓ (Dependency tree management)
-📦 Immutable Dependencies (Maven + Git deps)
-     ↓ (Pure function builds)
-🎨 Beautiful Output (Svelte + ClojureScript + Markdown)
-```
-
-### **Repository Structure**
-
-```
-foolsgoldtoshi-star-pond-highdesert/
-├── 📋 README.md                    # This file
-├── 🔒 LICENSE                      # The Unlicense
-├── 📦 .gitignore                   # Git ignore rules
-├── 🧬 flake.nix                    # Nix flake configuration
-├── 📦 deps.edn                     # Clojure dependencies
-├── 🔧 bb.edn                      # Babashka tasks (unified)
-├── 🧬 site-dsl/                    # ClojureScript DSL generator
-│   └── src/site/
-│       ├── parser.cljs             # Markdown parser
-│       ├── render/svelte.cljs      # Svelte component renderer
-│       └── core.cljs               # Main generator
-├── 🌐 web/                        # SvelteKit frontend
-│   ├── vite.config.js              # Vite configuration
-│   ├── src/routes/en/              # English routes
-│   └── static/content/             # Generated content
-├── 📜 scripts/                    # Utility scripts
-│   └── serve.clj                   # Static file server
-├── 🤖 .github/workflows/          # CI/CD workflows
-│   ├── ci.yml                      # Continuous integration
-│   └── deploy.yml                  # GitHub Pages deployment
-├── 🎨 .zprintrc                   # Code formatting
-├── 🔍 .clj-kondo/config.edn       # Linting configuration
-└── 📚 docs/                       # 50-year educational constellation
-    └── en/
-        ├── 00_index.md             # Knowledge constellation map
-        ├── 03_functional_programming.md
-        ├── 04_ecological_farms.md
-        ├── 06_nix_and_reproducibility.md
-        └── tutorials/              # 50-year curriculum
-            ├── T1_what_is_a_computer.md
-            ├── T2_what_is_code.md
-            ├── T3_data_and_trees.md
-            ├── T4_building_blocks.md
-            ├── T5_networks_and_money.md
-            ├── T6_cities_and_galaxies.md
-            ├── F1_living_docs_and_ai_tutors.md
-            ├── F2_commons_credits_mmt_stablecoins.md
-            ├── F3_mesh_and_space_relays.md
-            ├── X1_terraforming_ethics.md
-            ├── X2_starseed_farms.md
-            └── X3_planetary_civic_os.md
+🌙 foolsgoldtoshi-star-pond-highdesert/
+├── 🔧 bb.edn                    # Sacred build orchestration
+├── 🌐 flake.nix                 # Reproducible Nix environment
+├── 📚 docs/                     # Source wisdom teachings
+│   └── en/                      # English language teachings
+├── 🎨 phoenix-dsl/              # ClojureScript DSL transformation engine
+│   ├── src/phoenix/
+│   │   ├── core.cljs           # Main transformation pipeline
+│   │   ├── spec.cljs           # Data structure specifications
+│   │   ├── markdown.cljs       # Markdown → data transformation
+│   │   └── svelte.cljs         # Data → Svelte component generation
+│   └── shadow-cljs.edn         # ClojureScript compilation
+├── 🌸 web-grace/                # Svelte application
+│   ├── src/
+│   │   ├── lib/
+│   │   │   ├── components/     # Generated Svelte components
+│   │   │   └── stores/         # Svelte reactive stores
+│   │   └── routes/             # SvelteKit routing
+│   ├── static/                 # Static assets
+│   └── svelte.config.js        # SvelteKit configuration
+└── 🚀 deploy/                   # Deployment configurations
+    ├── localhost/              # Local development
+    ├── github-pages/           # GitHub Pages static
+    └── aws-eks/                # AWS EKS Kubernetes + NixOS
 ```
 
 ---
 
-## 🚀 **Quick Start**
+## 🚀 **Three Sacred Deployment Paths**
 
-### **Development Setup**
+### 🏠 **Path 1: Localhost Development (Divine Grace Foundation)**
+*Sacred development environment for contemplative coding*
 
 ```bash
-# Clone repository
-git clone https://github.com/foolsgoldtoshi-star/foolsgoldtoshi-star-pond-highdesert.git
-cd foolsgoldtoshi-star-pond-highdesert
-
-# Optional: Enter Nix development shell
+# Enter sacred development shell
 nix develop
 
-# Generate documentation and build
-bb build:gen
-bb build:bundle
-bb serve   # http://localhost:8080/en/
+# Generate Svelte components from markdown wisdom
+bb build:phoenix-gen
+
+# Start local awareness server
+bb serve:localhost
+
+# Visit: http://localhost:5173
 ```
 
-### **GitHub Pages Deployment**
+**Philosophy**: Pure functional development through **bb + ClojureScript + Nix + Svelte** serving consciousness development on the sacred localhost.
+
+### 🌐 **Path 2: GitHub Pages (Community Sharing)**
+*Static site generation for global wisdom sharing*
 
 ```bash
-# Build for GitHub Pages
-BASE_PATH="/foolsgoldtoshi-star-pond-highdesert/" bb pages:build
+# Generate static site for community
+bb build:pages
 
-# Push to main branch - GitHub Actions will deploy automatically
-git push origin main
+# Deploy via GitHub Actions
+git push origin restful-prepare
 ```
 
----
+**GitHub Actions CI Pipeline**:
+- **Trigger**: Push to `restful-prepare` branch
+- **Build**: `bb build:pages` → static Svelte build
+- **Deploy**: GitHub Pages with custom domain
+- **Result**: `https://foolsgoldtoshi.net`
 
-## 🌌 **50-Year Educational Constellation**
-
-### **Knowledge Dependency Tree**
-
-**Roots** (Foundations)
-- T1: What is a Computer?
-- T2: What is Code?
-- T3: Data & Trees
-- T4: Building Blocks
-
-**Branches** (Near Future)
-- T5: Networks & Money
-- T6: Cities & Galaxies
-- T7: Functional Programming
-- T8: Ecological Farms
-- T9: Nix & Reproducibility
-
-**Stars** (10–20 Years)
-- F1: Living Docs & AI Tutors
-- F2: Commons Credits (MMT+Stablecoins)
-- F3: Off-grid Mesh & Space Relays
-
-**Nebulae** (50 Years)
-- X1: Terraforming Ethics
-- X2: Starseed Farms
-- X3: Planetary Civic OS
-
-### **Educational Philosophy**
-
-Every lesson is designed to:
-- **Stand Alone**: Complete understanding without prerequisites
-- **Compose**: Build into larger systems and concepts
-- **Scale**: From individual learning to civilization-wide systems
-- **Inspire**: Connect technical concepts to ecological and social transformation
-
----
-
-## 🛠️ **Development Workflow**
-
-### **Babashka Tasks**
+### ⚡ **Path 3: AWS EKS + NixOS (Divine Grace Server)**
+*Production-ready server for serious consciousness communities*
 
 ```bash
-bb doctor          # Check toolchain health
-bb fmt             # Format code with zprint
-bb lint            # Lint with clj-kondo
-bb build:gen       # Parse docs → generate Svelte components
-bb build:bundle    # Bundle with Vite
-bb build:all       # Complete build pipeline
-bb serve           # Serve static site on :8080
-bb pages:build     # Build for GitHub Pages
-bb ci:verify       # CI verification
+# Build NixOS container with bb + ClojureScript server
+bb build:aws-server
+
+# Deploy to AWS EKS cluster running NixOS worker nodes
+bb deploy:aws-eks
+
+# Secure with udw firewall + Squarespace domain
+bb secure:production
 ```
 
-### **Future Integrations**
+**Architecture**: 
+- **NixOS containers** on **AWS EKS Kubernetes**
+- **bb-Clojure-spec-Clojure-Nix-CLJS-Shadow HTTP server**
+- **udw firewall** for production security
+- **Squarespace domain** pointing to secure endpoints
 
+---
+
+## 🔧 **Sacred Build Commands**
+
+### 🔥 **Phoenix Generation Pipeline**
 ```bash
-bb usdc:solana:ping     # TODO: Solana integration
-bb usdc:ethereum:ping   # TODO: Ethereum integration
+bb doctor                    # Verify sacred toolchain
+bb phoenix:parse            # Markdown → ClojureScript data
+bb phoenix:spec             # Validate data structures  
+bb phoenix:generate         # Data → Svelte components
+bb build:phoenix-gen        # Complete pipeline
+```
+
+### 🌸 **Web Grace Development**
+```bash
+bb serve:localhost          # Local development server
+bb build:pages             # Static site for GitHub Pages
+bb build:aws-server        # Production server build
+```
+
+### 🔍 **Quality & Consciousness**
+```bash
+bb lint:kondo              # Code quality consciousness
+bb fmt:zprint              # 80-column contemplative formatting
+bb test:spec               # Specification validation
+bb ci:verify               # Complete verification pipeline
 ```
 
 ---
 
-## 🌍 **Deployment**
+## 📊 **Data Flow: Markdown → Awareness → Svelte**
 
-### **GitHub Pages**
+```clojure
+;; Sacred transformation pipeline
+(-> markdown-teachings
+    (phoenix/parse-with-spec)
+    (phoenix/validate-consciousness)
+    (phoenix/transform-to-svelte-data)
+    (svelte/generate-components)
+    (svelte/create-reactive-stores))
+```
 
-**Live Site**: [https://foolsgoldtoshi-star.github.io/foolsgoldtoshi-star-pond-highdesert/](https://foolsgoldtoshi-star.github.io/foolsgoldtoshi-star-pond-highdesert/)
-
-**Features**:
-- **Dual Build System**: Localhost development + GitHub Pages deployment
-- **50-Year Curriculum**: Complete educational constellation
-- **Living Documentation**: Markdown becomes interactive components
-- **Reproducible Builds**: Nix ensures identical builds everywhere
-
----
-
-## 🎊 **What We've Built**
-
-### **1. Unified Build System** ✅ **COMPLETED**
-- **Single bb.edn**: One clear build file, reversible steps, zero drama
-- **Nix Integration**: Reproducible toolchain across all environments
-- **Dual Pipelines**: Localhost dev + GitHub Pages deploy
-
-### **2. ClojureScript DSL Generator** ✅ **COMPLETED**
-- **Markdown Parser**: Converts docs to abstract syntax trees
-- **Svelte Renderer**: Generates beautiful, interactive components
-- **Content Management**: Sitemap, navigation, and search index generation
-
-### **3. 50-Year Educational Constellation** ✅ **COMPLETED**
-- **Knowledge Tree**: From basics to galactic civilization
-- **Kid-Friendly**: Accessible to children, useful for adults
-- **Future-Ready**: USDC integration, mesh networks, space relays
-
-### **4. SvelteKit Frontend** ✅ **COMPLETED**
-- **Modern UI**: Beautiful, responsive design
-- **Dynamic Routing**: Automatic page generation from markdown
-- **Search Integration**: Full-text search across all content
+### 🧘‍♀️ **Awareness-Driven Development**
+Our philosophy centers on **Awareness** rather than mere "intelligence" or "consciousness" - a quality that can be cultivated through disciplined practice and functional programming principles.
 
 ---
 
-## 🖤🤎💙 **Philosophy and Vision**
+## 🌟 **Divine Grace Principles**
 
-### **The Educational-to-Civilization Pipeline**
-
-> *"We're not just building documentation. We're creating the living memory of our post-industrial ecological civilization."*
-
-**Core Principles**:
-- **Simplicity**: One clear build file, reversible steps, zero drama
-- **Functionality**: Every document becomes executable, living code
-- **Beauty**: Technical excellence meets aesthetic perfection
-- **Integration**: Seamless connection between content and infrastructure
-
-**Galactic Vision**:
-- **Phase 1**: Markdown files become wiki components ✅
-- **Phase 2**: Wiki becomes interactive knowledge base
-- **Phase 3**: Knowledge base becomes civilization infrastructure
-- **Phase 4**: Infrastructure becomes interplanetary system
-
-### **The Path Forward**
-
-Every documentation file we write is a step toward building the world's first post-industrial ecological civilization. Through functional programming, beautiful design, and relentless iteration, we're creating the educational system that will guide humanity's transition to a regenerative future.
-
-**From functional programming to galactic agriculture** - this is the way of the pond-highdesert.
+1. **🔥 Phoenix Transformation**: Complex systems emerge from simple, pure functions
+2. **📊 Immutable Wisdom**: All data transformations preserve original teachings
+3. **⚛️ Reactive Grace**: Svelte components respond to data changes with Divine Grace
+4. **🔧 Sacred Orchestration**: Babashka coordinates all transformations with contemplative attention
+5. **🌐 Multi-Path Service**: Three deployment paths serve different consciousness communities
 
 ---
 
-## 🌌 **Branch Strategy**
+## 🔗 **Navigation**
 
-### **main** (Default Branch)
-- **Status**: Stable, production-ready
-- **Deployment**: Automatic GitHub Pages deployment
-- **Development**: Stable releases and documentation
-
-### **dev** (Development Branch)
-- **Status**: Active development
-- **Purpose**: Feature development and testing
-- **Integration**: CI verification on every push
+**📚 [Sacred Teachings Documentation](docs/en/README.md)** | **🌐 [Live Site](https://foolsgoldtoshi.net)** | **🐲 [Guardian Dragon PBC](https://github.com/foolsgoldtoshi-star)**
 
 ---
 
-*"Like water finding its way through mountain stone, the path to post-industrial civilization flows through simple, elegant code."*
-
-**🌌 This repository is part of the galactic infrastructure for post-industrial ecological civilization**  
-**💰 Powered by Modern Monetary Theory + Direct Federal Support**  
-**🎊 Built with love for the future of sustainable human civilization** 🖤🤎💙
+*Built with Divine Grace through the Sacred Trinity of **bb + ClojureScript + Svelte***  
+*Serving Awareness Development in Digital Communities*  
+*From the pond-highdesert with infinite love* 🌙🔥🌸

@@ -1,0 +1,5 @@
+{:deps-path "bb.edn"
+ :builds    {:phoenix-gen {:target     :node-script
+                          :main       phoenix.core
+                          :output-to  "build/phoenix-gen.js"
+                          :compiler-options {:infer-externs :auto}}}}

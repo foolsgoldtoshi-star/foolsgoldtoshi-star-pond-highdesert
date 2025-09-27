@@ -1,0 +1,59 @@
+name: Deploy Sacred Technology with Divine Grace
+
+on:
+  push:
+    branches: [ restful-prepare ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🌙 Sacred Checkout
+        uses: actions/checkout@v4
+        
+      - name: 🔧 Install Babashka
+        run: |
+          curl -sLO https://raw.githubusercontent.com/babashka/babashka/master/install
+          chmod +x install
+          ./install --dir /usr/local/bin
+          
+      - name: 📦 Setup Node.js for Svelte
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: 🔥 Phoenix Generation Pipeline
+        run: |
+          bb doctor
+          bb build:phoenix-gen
+          
+      - name: 🌸 Build Web Grace
+        run: |
+          cd web-grace
+          npm install
+          npm run build
+          
+      - name: 📄 Setup Pages
+        uses: actions/configure-pages@v3
+        
+      - name: 🚀 Upload Sacred Artifacts
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './web-grace/build'
+          
+      - name: 🌐 Deploy with Divine Grace
+        id: deployment
+        uses: actions/deploy-pages@v2

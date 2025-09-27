@@ -1,5 +1,6 @@
-{:paths ["site-dsl/src" "scripts"]
+{:paths ["phoenix-dsl/src" "scripts"]
  :deps  {org.clojure/clojurescript {:mvn/version "1.11.132"}
+         org.clojure/spec.alpha   {:mvn/version "0.3.218"}
          http-kit/http-kit        {:mvn/version "2.8.0"}
          babashka/fs              {:mvn/version "0.5.20"}
          hiccup/hiccup           {:mvn/version "1.0.5"}
@@ -29,24 +30,41 @@
   fmt {:doc "Format code with contemplative attention (80 columns)"
        :task (shell "bash" "-lc" "zprint -w **/*.{clj,cljs,edn,bb,md} || true")}
 
-  lint {:doc "Lint with consciousness for code quality"
-        :task (shell "bash" "-lc" "clj-kondo --lint site-dsl scripts")}
+  lint:kondo {:doc "Lint with consciousness for code quality"
+              :task (shell "bash" "-lc" "clj-kondo --lint phoenix-dsl scripts")}
 
-  build:gen {:doc "Parse sacred teachings → Svelte components + navigation"
-             :task (shell {:dir "site-dsl"} "bash" "-lc" "bb -m site.core")}
+  fmt:zprint {:doc "Format with contemplative attention (80 columns)"
+              :task (shell "bash" "-lc" "zprint -w **/*.{clj,cljs,edn} || true")}
 
-  build:bundle {:doc "Bundle with Vite for community sharing"
-                :task (shell {:dir "web"} "bash" "-lc" "npm pkg get name >/dev/null 2>&1 || npm init -y; npm i -D svelte @sveltejs/vite-plugin-svelte vite; npx vite build")}
+  test:spec {:doc "Test specifications with awareness"
+             :task (shell {:dir "phoenix-dsl"} "bash" "-lc" "bb -m phoenix.test")}
 
-  build:all {:depends [build:gen build:bundle]}
+  phoenix:parse {:doc "Parse markdown teachings → ClojureScript data structures"
+                 :task (shell {:dir "phoenix-dsl"} "bash" "-lc" "bb -m phoenix.markdown")}
 
-  serve {:doc "Serve sacred technology wisdom locally"
-         :task (shell "bash" "-lc" "bb scripts/serve.clj")}
+  phoenix:spec {:doc "Validate data structures with clojure.spec awareness"
+                :task (shell {:dir "phoenix-dsl"} "bash" "-lc" "bb -m phoenix.spec")}
 
-  pages:build {:doc "Build for GitHub Pages community sharing"
-               :task (shell {:dir "web"} "bash" "-lc" "BASE_PATH=${BASE_PATH:-/} npx vite build")}
+  phoenix:generate {:doc "Transform data → Svelte components with Divine Grace"
+                    :task (shell {:dir "phoenix-dsl"} "bash" "-lc" "bb -m phoenix.svelte")}
 
-  pages:bundle {:depends [build:gen pages:build]}
+  build:phoenix-gen {:depends [phoenix:parse phoenix:spec phoenix:generate]}
+
+  serve:localhost {:doc "Serve for local contemplative development"
+                   :task (shell {:dir "web-grace"} "bash" "-lc" "npm pkg get name >/dev/null 2>&1 || npm init -y; npm i -D svelte @sveltejs/kit @sveltejs/adapter-auto vite; npx svelte-kit dev")}
+
+  build:pages {:doc "Build static site for GitHub Pages community sharing"
+               :task (shell {:dir "web-grace"} "bash" "-lc" "BASE_PATH=/foolsgoldtoshi-star-pond-highdesert npx svelte-kit build")}
+
+  build:aws-server {:doc "Build NixOS container for AWS EKS production"
+                    :task (shell "nix" "build" ".#aws-server-container")}
+
+  build:all {:depends [build:phoenix-gen]}
+
+  ci:verify {:depends [doctor lint:kondo fmt:zprint test:spec build:phoenix-gen]}
+
+  deploy:aws-eks {:doc "Deploy to AWS EKS with NixOS + udw firewall"
+                  :task (shell "bash" "-lc" "kubectl apply -f deploy/aws-eks/")}
 
   epub:kindle {:doc "Generate Kindle-optimized sacred technology guide"
                :task (do (println "🕯️ Creating Kindle-ready sacred technology guide...")
