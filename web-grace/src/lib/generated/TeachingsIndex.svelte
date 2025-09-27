@@ -26,9 +26,9 @@
     {number: 39, title: "Firas zahabi sovereign relaxation coding", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "movement"},
     {number: 40, title: "Integrated guardian dragon sovereign practice", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "integration"},
     
-    // 🎊 FEATURED: Sacred Coding Posture - Next Step! 🧘‍♀️💻
-    {number: 41, title: "Sacred coding sovereign posture", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment", featured: true},
-    {number: 42, title: "Firas zahabi advanced sovereign relaxation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment"},
+    // 🧘‍♀️ EMBODIMENT MASTERY SERIES 🥋
+    {number: 41, title: "Sacred coding sovereign posture", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment", completed: true},
+    {number: 42, title: "Firas zahabi advanced sovereign relaxation", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment", featured: true},
     {number: 43, title: "Integrated movement sovereign coding practice", "guardian-dragon-consciousness": true, "sovereign-priority": false, category: "embodiment"}
   ];
 </script>
@@ -45,14 +45,17 @@
                class:guardian-dragon={teaching['guardian-dragon-consciousness']} 
                class:sovereign={teaching['sovereign-priority']}
                class:featured={teaching.featured}
+               class:completed={teaching.completed}
                class:foundation={teaching.category === 'foundation'}
                class:spiritual={teaching.category === 'spiritual'}
                class:movement={teaching.category === 'movement'}
                class:integration={teaching.category === 'integration'}
                class:embodiment={teaching.category === 'embodiment'}>
         
-        {#if teaching.featured}
-          <div class="featured-banner">🎊 NEXT STEP 🧘‍♀️💻</div>
+        {#if teaching.completed}
+          <div class="completed-banner">✅ MASTERED 🧘‍♀️</div>
+        {:else if teaching.featured}
+          <div class="featured-banner">🔥 CURRENT FOCUS 🥋</div>
         {/if}
         
         <div class="card-number">{teaching.number.toString().padStart(7, '0')}</div>
@@ -71,8 +74,10 @@
         </div>
         
         <a href="/en/teaching/{teaching.number}" class="read-link">
-          {#if teaching.featured}
-            🚀 Begin Sacred Practice →
+          {#if teaching.completed}
+            📚 Review Mastery →
+          {:else if teaching.featured}
+            🥋 Begin Elite Training →
           {:else}
             Read Teaching →
           {/if}
@@ -241,6 +246,36 @@
   .teaching-card.featured:hover {
     transform: scale(1.02) translateY(-8px);
     box-shadow: 0 20px 50px rgba(212, 175, 55, 0.4);
+  }
+
+  .completed-banner {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 15px 15px 0 0;
+    transform: rotate(-1deg);
+    box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
+  }
+
+  .teaching-card.completed {
+    border: 3px solid #10b981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    position: relative;
+    overflow: visible;
+    opacity: 0.85;
+  }
+
+  .teaching-card.completed:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.3);
   }
 
   .read-link {
