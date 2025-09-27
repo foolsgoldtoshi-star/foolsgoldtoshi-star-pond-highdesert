@@ -205,4 +205,4 @@ Your functional composition consciousness develops through community service app
 
 ---
 
-**Functional Composition Navigation**: [← Previous: Immutable Data Meditation](0000017_immutable_data_meditation.md) | [Next: Spec-Driven Development Consciousness →](0000019_spec_driven_development_consciousness.md) | [Advanced Functional Philosophy →](0002300_advanced_functional_philosophy.md)
+**Functional Composition Navigation**: [Guardian Dragon Consciousness ←](0000040_guardian_dragon_sovereignty_wisdom.md) | [Community Service continues...](docs/en/README.md) | [Next: Immutable Data Meditation →](9999983_immutable_data_meditation.md)
