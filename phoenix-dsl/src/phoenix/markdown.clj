@@ -69,7 +69,7 @@
   "Discover sacred teachings with functional composition"
   [_docs-path]
   (println "🌙 Discovering sacred teachings with Divine Grace...")
-  (let [teaching-files (find-teaching-files "../docs/en" "0000*.md" 50)]
+  (let [teaching-files (find-teaching-files "../docs/en" "0000*.md" 60)]
     (println "📂 Found teaching files:" teaching-files)
     (->> teaching-files
          (map load-and-parse)

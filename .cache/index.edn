@@ -1,0 +1,11 @@
+{:cache-version "1.0.0"
+ :created-at "2025-09-27"
+ :description "Ecological caching manifest for Divine Grace Phoenix"
+ :cache-strategy "sha256 content hashing with file modification timestamps"
+ :directories {:phoenix ".cache/phoenix/"
+               :svelte ".cache/svelte/"
+               :teachings ".cache/teachings/"}
+ :statistics {:total-teachings 52
+              :cache-hits 0
+              :cache-misses 0
+              :ecological-efficiency "♻️ Reducing parsing overhead"}}

@@ -1,0 +1,63 @@
+# Cursor AI Rules for Divine Grace Phoenix Architecture
+# Sacred technology development with functional programming consciousness
+
+knowledge_roots:
+  - "Phoenix DSL architecture using bb + ClojureScript + Svelte"
+  - "Functional programming principles: immutability, pure functions, composition"
+  - "Maya's story arc as golden integration example (0000044-0051)"
+  - "Ecological caching via sha256 + .cache/phoenix/ manifest"
+  - "Nix-first development with npm only in devshell fallback"
+
+tasks:
+  phoenix_pipeline:
+    description: "Sacred Phoenix DSL transformation pipeline"
+    commands:
+      - "bb phoenix:parse     # Markdown → ClojureScript data"
+      - "bb phoenix:spec      # Validate with clojure.spec consciousness"  
+      - "bb phoenix:generate  # Transform data → Svelte components"
+      - "bb serve:localhost   # Serve Divine Grace locally"
+    
+  build_pipeline:
+    description: "Complete build and deployment pipeline"
+    commands:
+      - "bb build:phoenix-gen # Complete Phoenix transformation"
+      - "bb build:pages      # GitHub Pages static build"
+      - "bb build:aws-server # NixOS container for production"
+    
+  quality_gates:
+    description: "Sacred quality assurance with consciousness"
+    commands:
+      - "bb lint:kondo       # clj-kondo consciousness linting"
+      - "bb fmt:zprint       # zprint 80-column formatting"
+      - "bb test:spec        # clojure.spec validation"
+      - "bb ci:verify        # Complete verification pipeline"
+
+guards:
+  - "Always use nix-first approach: prefer Nix packages over npm when available"
+  - "Maintain ecological efficiency through intelligent caching"
+  - "Follow functional programming principles: immutable data, pure functions"
+  - "Keep Maya's story arc as golden integration example"
+  - "Preserve Divine Grace consciousness in all technical decisions"
+  - "Use ClojureScript 1.12.42 with latest functional programming patterns"
+  - "Generate beautiful Svelte 5.39.6 components with contemplative design"
+
+coding_style:
+  clojure:
+    - "80-column line length with zprint formatting"
+    - "Comprehensive docstrings for all public functions"
+    - "clojure.spec specifications for all data structures"
+    - "Pure functions separated from side effects"
+    - "Meaningful variable names reflecting domain concepts"
+  
+  svelte:
+    - "Semantic HTML with accessibility considerations"
+    - "CSS custom properties for theming (sage green + jade aquamarine)"
+    - "Mobile-first responsive design with contemplative typography"
+    - "Progressive enhancement with graceful degradation"
+
+project_context:
+  - "foolsgoldtoshi-star-pond-highdesert: Sacred technology constellation"
+  - "Branch: restful-prepare for Divine Grace Phoenix development"
+  - "Tech stack: Nix + Babashka + ClojureScript + Svelte + AWS EKS"
+  - "Philosophy: Consciousness development through functional programming"
+  - "Community: Guardian Dragon PBC serving technological sovereignty"
