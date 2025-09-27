@@ -8,7 +8,7 @@ Inspiring technologists! This is the story of how Maya and Alex took their open 
 
 ## The Spark: Friends with Amazing Projects 💡🎨
 
-*"The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi*
+*"When you serve, you discover that the one who serves and the one who is served are one. Service is the bridge between separation and unity." - Osho*
 
 During one of their regular Faeb community meetups at Riverside Commons, Maya and Alex realized their friends had created incredible projects that deserved global audiences:
 

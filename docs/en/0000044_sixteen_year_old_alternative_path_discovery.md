@@ -8,7 +8,7 @@ Hey there, beautiful soul! This story is for you if you're 16 and wondering whet
 
 ## The Morning Everything Changed 🌄💫
 
-*"Your time is limited, don't waste it living someone else's life." - Steve Jobs*
+*"Don't be a carbon copy of someone else. Be authentically yourself. Only then can you contribute something unique to existence." - Osho*
 
 Maya woke up on her 16th birthday with a feeling she'd been carrying for months - that sitting in classrooms for seven hours a day wasn't where her real learning was happening. She'd been researching her state's education laws and discovered something amazing: at 16, she could legally choose to direct her own education, as long as her parents supported her decision.
 

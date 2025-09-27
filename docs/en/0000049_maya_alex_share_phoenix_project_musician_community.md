@@ -1,6 +1,6 @@
 # Maya and Alex Share the Phoenix Magic 🔥🎵💻
 
-*"The beautiful thing about learning is that nobody can take it away from you." - B.B. King*
+*"Learning is not accumulation. Learning is a constant discovery, a constant revelation. Every moment teaches you if you are available." - Osho*
 
 ---
 

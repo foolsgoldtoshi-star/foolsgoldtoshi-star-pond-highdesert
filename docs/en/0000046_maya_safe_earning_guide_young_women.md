@@ -1,6 +1,6 @@
 # Maya's Guide: Earning Your First Laptop 💻💪
 
-*"A journey of a thousand miles begins with a single step." - Lao Tzu*
+*"The journey of awakening begins with a single moment of awareness. In that moment, you are no longer a victim of circumstances but the creator of your destiny." - Osho*
 
 ---
 

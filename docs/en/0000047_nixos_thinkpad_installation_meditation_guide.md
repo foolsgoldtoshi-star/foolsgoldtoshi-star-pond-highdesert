@@ -1,6 +1,6 @@
 # NixOS Installation Meditation Guide 🧘‍♀️💻
 
-*"The wise person lets go of all results, whether good or bad, and is focused on the action alone." - Bhagavad Gita (Stephen Mitchell)*
+*"Meditation is a surrender to the present moment. When you are totally here and now, action happens through you, not by you." - Osho*
 
 ---
 

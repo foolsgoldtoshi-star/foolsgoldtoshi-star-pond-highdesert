@@ -1,6 +1,6 @@
 # Maya Discovers Functional Programming Magic 🌟⚡💻
 
-*"Simplicity is the ultimate sophistication." - Leonardo da Vinci*
+*"Simplicity is the ultimate sophistication. When you reach to the very center of your being, you find simplicity. All complexity is on the periphery." - Osho*
 
 ---
 

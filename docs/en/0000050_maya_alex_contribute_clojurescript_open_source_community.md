@@ -8,7 +8,7 @@ Hey future open source contributors! This is the story of how Maya and Alex took
 
 ## The Day Maya Found a Bug 🐛🔍
 
-*"The expert in anything was once a beginner." - Helen Hayes*
+*"Learning is discovering that something is possible. The moment you learn that something is possible, you have already started becoming it." - Osho*
 
 Three weeks after Maya's functional programming breakthrough, she and Alex were deep into rebuilding Faeb with ClojureScript when Maya encountered something unexpected.
 
