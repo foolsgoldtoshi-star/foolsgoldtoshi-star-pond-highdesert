@@ -247,13 +247,14 @@
 ;; Generate the complete series
 (println "🐲 Generating Guardian Dragon PBC Complete Tutorial Series...")
 
+;; Generate the complete series with proper scoping
 (let [all-topics (apply concat (vals curriculum))
       base-topics ["Welcome to Guardian Dragon PBC"
                    "Choosing Your Sacred Workstation" 
                    "Setting Up Your Digital Fortress"]]
-
-;; First, generate the articles we already have with proper numbers
-(doseq [[i topic] (map-indexed vector base-topics)]
+  
+  ;; First, generate the articles we already have with proper numbers
+  (doseq [[i topic] (map-indexed vector base-topics)]
   (when-not (fs/exists? (str "docs/en/" (format "%03d" i) "_" (slugify topic) ".md"))
     (let [filename (str "docs/en/" (format "%03d" i) "_" (slugify topic) ".md")]
       (println (str "Generated: " filename)))))

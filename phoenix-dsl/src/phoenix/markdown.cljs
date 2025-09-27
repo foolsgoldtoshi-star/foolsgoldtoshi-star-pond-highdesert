@@ -31,7 +31,9 @@
   (->> (fs/glob docs-path "0000*.md")
        (take 9) ; Focus on NINE first essays
        (map (fn [path]
-              (let [content (slurp path)]
+              ;; Note: ClojureScript doesn't have slurp, need Node.js fs
+              (let [fs (js/require "fs")
+                    content (.readFileSync fs path "utf8")]
                 (extract-sacred-metadata path content))))
        (sort-by :number)))
 

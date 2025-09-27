@@ -5,14 +5,18 @@
             [phoenix.spec :as spec]))
 
 ;; Pure string transformation pipeline
-(defn sanitize-title [title]
+(defn sanitize-title 
+  "Clean title for use in component names"
+  [title]
   (-> title
       (str/replace #"[^a-zA-Z0-9\s]" "")
       (str/replace #"\s+" "_")
       (str/replace #"_+" "_")
       str/trim))
 
-(defn teaching-to-component-name [title]
+(defn teaching-to-component-name 
+  "Convert title to Svelte component name"
+  [title]
   (str "Teaching_" (sanitize-title title)))
 
 ;; Decomposed template generation - simple, composable functions
@@ -58,10 +62,13 @@
 ;; Memoized style loading for ecological efficiency
 (def style-cache (atom nil))
 
-(defn build-style-section []
+(defn build-style-section 
+  "Load and cache CSS styles using Node.js fs"
+  []
   (if-let [cached-styles @style-cache]
     cached-styles
-    (let [styles (slurp "../phoenix-dsl/templates/teaching-styles.css")]
+    (let [fs (js/require "fs")
+          styles (.readFileSync fs "../phoenix-dsl/templates/teaching-styles.css" "utf8")]
       (reset! style-cache styles)
       styles)))
 
@@ -72,12 +79,12 @@
        "<style>\\n" (build-style-section) "</style>\\n"))
 
 (defn generate-teaching-component
-  \"Pure function: compose component from small parts\"
+  "Pure function: compose component from small parts"
   [teaching]
   (let [component-name (teaching-to-component-name (:title teaching))]
     {:component-name component-name
      :file-path (str \"../web-grace/src/lib/generated/\" component-name \".svelte\")
-     :content (assemble-component teaching)})))
+     :content (assemble-component teaching)}))
 
 (defn generate-index-component
   "Generate index component listing all sacred teachings"
@@ -172,8 +179,11 @@
     (.mkdirSync (js/require "fs") dir #js {:recursive true})
     dir))
 
-(defn write-file [file-path content]
-  (spit file-path content))
+(defn write-file 
+  "Write content to file using Node.js fs"
+  [file-path content]
+  (let [fs (js/require "fs")]
+    (.writeFileSync fs file-path content "utf8")))
 
 (defn write-component-to-file
   "Side effect: write component to filesystem"
