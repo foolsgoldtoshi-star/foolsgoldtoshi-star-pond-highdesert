@@ -1,0 +1,6 @@
+{:paths ["src"]
+ :deps  {org.clojure/clojurescript {:mvn/version "1.11.132"}
+         org.clojure/spec.alpha   {:mvn/version "0.3.218"}
+         babashka/fs              {:mvn/version "0.5.20"}
+         hiccup/hiccup           {:mvn/version "1.0.5"}
+         markdown-clj/markdown-clj {:mvn/version "1.11.4"}}}
