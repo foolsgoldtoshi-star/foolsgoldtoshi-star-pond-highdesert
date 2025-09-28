@@ -435,14 +435,149 @@ git commit -S -m "🔧 TailsOS development dotfiles
 git push -u origin main
 ```
 
-**Now Digital Services Become Possible ($15-50/hour):**
-- **Website creation** using full development environment
-- **Social media management** through secure, portable setup
-- **Online tutoring** with professional tools on any computer
-- **Content creation** with complete privacy protection
-- **Cloud development** with secure SSH and GPG workflows
+### **Phase 6: Advanced Development Tools & Professional Workflow**
 
-### **🎨 Creative Services ($10-75/item)**
+**6.1 Cursor IDE Integration with GPG** *(Complete AI-Assisted Development)*
+```bash
+# Configure Cursor for GPG signing and development
+mkdir -p ~/Persistent/cursor-config
+cat > ~/Persistent/cursor-config/settings.json << 'EOF'
+{
+    "git.enableCommitSigning": true,
+    "git.confirmSync": false,
+    "editor.fontSize": 14,
+    "editor.tabSize": 2,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "files.autoSave": "afterDelay",
+    "workbench.startupEditor": "readme",
+    "editor.formatOnSave": true
+}
+EOF
+
+# Configure GPG pinentry for Cursor compatibility
+echo "pinentry-program /usr/bin/pinentry-gtk2" >> ~/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent && gpgconf --launch gpg-agent
+```
+
+**6.2 Professional Project Templates & Client Management**
+```bash
+# Create comprehensive project management system
+mkdir -p ~/Persistent/templates/{web-project,social-media,tutoring}
+
+# Web development template with modern practices
+cd ~/Persistent/templates/web-project
+cat > package.json << 'EOF'
+{
+  "name": "client-website-template",
+  "version": "1.0.0",
+  "description": "Professional website template for TailsOS development",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Build process - customize as needed'"
+  }
+}
+EOF
+
+# Client communication templates
+cat > client-email-templates.md << 'EOF'
+# Professional Client Communication Templates
+
+## Initial Consultation Email
+Subject: Website Development Consultation - Next Steps
+
+Hi [Client Name],
+
+Thank you for choosing me for your website project! Based on our discussion, here's what we'll accomplish:
+
+**Project Scope:**
+✅ [Specific deliverables based on client needs]
+✅ Mobile-responsive design
+✅ Professional contact forms
+✅ Basic SEO optimization
+
+**Timeline:** [X] weeks from contract signing
+**Investment:** $[amount] (50% upfront, 50% on completion)
+**Next Steps:** Please review attached contract and let me know if you have questions
+
+I'm excited to bring your vision to life!
+
+Best regards,
+[Your Name]
+[GitHub Portfolio: github.com/yourusername]
+EOF
+```
+
+**6.3 Advanced Development Workflow with Screen & Git**
+```bash
+# Enhanced Screen configuration for development workflow
+cat >> ~/.screenrc << 'EOF'
+
+# Development-specific window configurations
+screen -t "cursor" 3 ~/Persistent/apps/cursor.AppImage
+screen -t "server" 4 
+screen -t "test" 5
+
+# Custom key bindings for development
+bind r source ~/.screenrc    # Reload config
+bind g screen -t "git" git status  # Quick git window
+bind n screen -t "nvim" nvim  # Quick nvim window
+
+# Split screen support for code review
+bind | split -v  # Vertical split
+bind - split     # Horizontal split
+bind tab focus   # Switch between splits
+EOF
+
+# Advanced Git workflow with automation
+cat > ~/Persistent/scripts/git-workflow.sh << 'EOF'
+#!/bin/bash
+# Advanced Git workflow for TailsOS development
+
+case "$1" in
+    "start")
+        echo "🚀 Starting new development session..."
+        git status
+        git pull origin main
+        screen -S dev-session
+        ;;
+    "save")
+        echo "💾 Saving current work..."
+        git add .
+        git commit -S -m "$2"
+        git push origin main
+        echo "✅ Work saved and pushed to GitHub"
+        ;;
+    "backup")
+        echo "📦 Creating project backup..."
+        ~/Persistent/backup-scripts/daily-backup.sh
+        ;;
+    *)
+        echo "Usage: git-workflow.sh {start|save|backup}"
+        echo "  start  - Begin development session"
+        echo "  save   - Commit and push changes"  
+        echo "  backup - Create full environment backup"
+        ;;
+esac
+EOF
+
+chmod +x ~/Persistent/scripts/git-workflow.sh
+
+# Add to Zsh aliases
+echo "alias dev-start='~/Persistent/scripts/git-workflow.sh start'" >> ~/.zshrc
+echo "alias dev-save='~/Persistent/scripts/git-workflow.sh save'" >> ~/.zshrc
+echo "alias dev-backup='~/Persistent/scripts/git-workflow.sh backup'" >> ~/.zshrc
+```
+
+**Now Complete Professional Digital Services Platform ($15-50/hour):**
+- **Enterprise website development** using Cursor IDE + professional templates
+- **Advanced social media management** with content calendars and analytics
+- **Professional online tutoring** with complete educational technology stack
+- **Secure content creation** with advanced privacy protection and backup systems
+- **Full-stack cloud development** with enterprise SSH/GPG security workflows
+- **Client project management** with professional communication and delivery systems
+- **Repository portfolio** showcasing skills through public GitHub contributions
+
+### **🎨 Enhanced Creative Services ($10-75/item)**
 
 **Digital Art and Design:**
 - Create logos for small businesses ($50-200 each)
