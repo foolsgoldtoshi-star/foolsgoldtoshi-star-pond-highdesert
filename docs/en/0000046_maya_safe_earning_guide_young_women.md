@@ -56,27 +56,45 @@ Before exploring specific opportunities, let's establish non-negotiable safety p
 
 *"Do what you love, and the money will follow." - Marsha Sinetar*
 
-Here are proven ways young women have safely earned laptop money while developing valuable skills:
+Here are proven ways young women have safely earned laptop money, starting with work that doesn't require a computer:
 
-### **💻 Digital Services ($15-50/hour)**
+### **🤝 In-Person Service Work ($12-25/hour)**
 
-**Website Creation for Small Businesses:**
-- Many local businesses need simple websites
-- Start with friends' family businesses or local nonprofits
-- Use free tools like Wix, Squarespace, or learn basic HTML/CSS
-- Charge $200-500 for simple business websites
+**Organized Assistant Work:**
+- Help busy families with scheduling and organization (using their computers when needed)
+- Assist with event planning and coordination  
+- Support elderly neighbors with technology tasks (teaching them on their devices)
+- Pet-sitting with regular check-ins and photo updates
 
-**Social Media Management:**
-- Help local businesses post consistently on Instagram/Facebook
-- Create content calendars and engaging posts
-- Many businesses pay $300-800/month for part-time social media help
-- Work remotely with scheduled check-ins
+**Creative Service Work:**
+- Help with children's birthday parties ($15-20/hour)
+- Assist at community events and farmers markets
+- Support local nonprofits during fundraising events
+- Event photography using borrowed or rental cameras
 
-**Online Tutoring:**
-- Tutor younger kids in subjects you excel at
-- Use platforms like Wyzant, Tutor.com, or local connections
-- Math, science, and writing tutoring pays $20-40/hour
-- Schedule around your own learning time
+**Educational Services:**
+- In-person tutoring at libraries or community centers
+- Study group facilitation for other students
+- Teaching music lessons (if you have musical skills)
+- Arts and crafts instruction for children
+
+### **🌙 TailsOS Bridge to Digital Work**
+
+*Once you've earned $20-30 for a USB drive and have access to library computers:*
+
+**The TailsOS Solution:**
+1. **Buy USB drive** ($15-25 at Target, Walmart, or Amazon) - 8GB minimum, 32GB recommended
+2. **Download TailsOS** on library computer from [tails.net](https://tails.net/doc/index.en.html) 
+3. **Install using Tails Installer** (built into the download, no BalenaEtcher needed)
+4. **Configure persistent storage** for SSH keys, development tools, and project files
+5. **Access secure terminal + full development environment** on any library computer
+6. **Maintain complete privacy** - all activity protected through Tor network
+
+**Now Digital Services Become Possible ($15-50/hour):**
+- Website creation using TailsOS development tools
+- Social media management through secure, portable environment  
+- Online tutoring with professional setup using any computer
+- Content creation with privacy protection and secure file storage
 
 ### **🎨 Creative Services ($10-75/item)**
 
@@ -113,19 +131,20 @@ Here are proven ways young women have safely earned laptop money while developin
 Here's how Maya would approach earning $500 in 3 months if she were starting from scratch:
 
 ### **Month 1: Foundation Building ($100-150)**
-- **Week 1-2**: Identify your strongest skills and local opportunities
-- **Week 3-4**: Complete 2-3 small projects to build reputation and confidence
-- **Focus**: Website creation for one local business ($150) OR tutoring 8 hours/week ($120-160)
+- **Week 1-2**: In-person service work to earn TailsOS USB stick ($20-30)
+- **Week 3**: Install TailsOS at library, set up secure development environment
+- **Week 4**: Begin digital services using TailsOS portable computing
+- **Focus**: Transition from in-person work to secure digital services
 
-### **Month 2: Skill Development ($150-200)**  
-- **Week 5-6**: Expand services based on what worked in Month 1
-- **Week 7-8**: Add complementary skills (if doing web design, add social media; if tutoring, add content creation)
-- **Focus**: Consistent service delivery + one larger project
+### **Month 2: TailsOS-Powered Digital Services ($150-200)**  
+- **Week 5-6**: Master TailsOS development tools and secure workflows
+- **Week 7-8**: Launch website creation and social media services using portable environment
+- **Focus**: Build reputation through TailsOS-powered professional digital services
 
-### **Month 3: Goal Achievement ($150-200)**
-- **Week 9-10**: Leverage reputation to find higher-paying opportunities
-- **Week 11-12**: Complete laptop fund and plan for ongoing tech tool maintenance
-- **Focus**: Sustainable income streams that can continue post-laptop
+### **Month 3: Framework Laptop Fund Completion ($150-200)**
+- **Week 9-10**: Scale TailsOS-powered services to higher-paying clients
+- **Week 11-12**: Complete Framework laptop fund and plan transition to personal hardware
+- **Focus**: Sustainable income streams bridging TailsOS → Framework laptop ownership
 
 **Total Target: $500** *(plus valuable experience, skills, and community connections)*
 

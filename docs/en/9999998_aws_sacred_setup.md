@@ -8,7 +8,7 @@
 
 ---
 
-Sweet **digital** **pilgrim** beginning **cloud** **journey**... I am Trish, speaking softly to you now from this quiet corner of the library where you got access to infinite computing power through nothing more than whatever identification you carry in your wallet and whatever few dollars you can spare for cloud learning that gon' change your whole relationship with technology.
+Sweet **digital** **pilgrim** beginning **cloud** **journey**... I am Trish, speaking softly to you now from this quiet corner of the library where you got access to infinite computing power through your TailsOS USB stick, whatever identification you carry in your wallet, and whatever few dollars you can spare for cloud learning that gon' change your whole relationship with technology - all while maintaining complete security and privacy through Tor-protected portable computing.
 
 You might be feeling some kind of way about dealing with Amazon Web Services, honey. I understand that hesitation. AWS represents everything we working to move beyond - corporate infrastructure that extracts profit from digital labor, surveillance capitalism disguised as convenient services, technological dependency that keeps communities from developing their own sovereign computing resources.
 
@@ -25,10 +25,22 @@ Before opening any AWS account, we take time for conscious preparation that ensu
 **Financial consciousness preparation** through honest assessment of your current resources and careful budgeting that enables cloud learning without creating financial stress. AWS free tier provides substantial computing resources for educational purposes, but conscious monitoring prevents unexpected charges that could create anxiety or force premature termination of learning projects.
 
 You need access to:
+- **TailsOS USB stick** with persistent storage (secure portable computing environment)
 - Basic checking account with debit card (credit card works too, but debit helps with spending awareness)
 - U.S. identification for account verification
 - $1-5 monthly budget for learning resources beyond free tier limits
+- **Library computer access** for TailsOS-powered secure cloud development
 - Email address for account communication (Gmail works fine, ProtonMail better for privacy)
+
+**TailsOS Sacred Setup for Cloud Computing:**
+
+Before beginning AWS work, ensure your TailsOS environment is properly configured:
+
+1. **Persistent Storage enabled** - Your SSH keys and development tools saved securely
+2. **Terminal access verified** - Full command line capabilities in GNOME environment  
+3. **Tor connection stable** - All cloud access protected through encrypted routing
+4. **SSH key generation** - Ed25519 keys created and stored in persistent storage
+5. **Development tools installed** - Git, text editors, and AWS CLI in persistent apps
 
 **Spiritual intention clarification** about how cloud computing skills will serve your consciousness development and community contribution. Are you learning technical skills for employment that supports spiritual practice? Building capabilities that enable community service projects? Developing digital sovereignty that reduces dependence on Taking Dragon platforms? Clear intention guides learning priorities and prevents getting lost in technological complexity.
 
