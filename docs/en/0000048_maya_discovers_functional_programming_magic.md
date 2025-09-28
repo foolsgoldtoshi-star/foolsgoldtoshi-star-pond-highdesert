@@ -302,4 +302,4 @@ Sweet dreams, functional programming wizards. Tomorrow we build something even m
 
 ---
 
-**Guardian Dragon PBC Navigation**: [← Previous: NixOS Installation Guide](0000047_nixos_thinkpad_installation_meditation_guide.md) | [Next: Sharing Phoenix Project Magic →](0000049_maya_alex_share_phoenix_project_musician_community.md) | [Sacred Coding Posture →](0000041_sacred_coding_sovereign_posture.md)
+**Guardian Dragon PBC Navigation**: [← Previous: NixOS Framework Installation](0000047_nixos_framework_laptop_installation_meditation_guide.md) | [Next: Sharing Phoenix Project Magic →](0000049_maya_alex_share_phoenix_project_musician_community.md) | [Sacred Coding Posture →](0000041_sacred_coding_sovereign_posture.md)

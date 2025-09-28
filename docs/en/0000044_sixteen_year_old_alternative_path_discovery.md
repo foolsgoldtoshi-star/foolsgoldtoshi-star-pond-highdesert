@@ -30,7 +30,7 @@ Her mother smiled. "Maya, we've watched you become such a thoughtful, responsibl
 
 Three weeks later, Maya stood in her room on what would have been another Monday morning of high school, but instead was the first day of her self-directed education journey. She packed her backpack mindfully:
 
-- **Her laptop** - a refurbished ThinkPad she'd saved up for, loaded with coding environments and digital art tools
+- **Her laptop** - a refurbished Framework laptop she'd saved up for, loaded with coding environments and digital art tools
 - **A notebook and good pens** - for sketching ideas and writing reflections  
 - **Her aluminum water bottle** - filled with the mint tea she'd learned to love
 - **A light lunch** - homemade trail mix and a sandwich
@@ -50,7 +50,7 @@ Maya found a comfortable spot at a wooden table outside the cafe, opened her lap
 
 The woman looked up with tired but grateful eyes. "That would be amazing! I'm trying to get to the train station, but these bus schedules are confusing."
 
-Maya pulled up the transit app on her phone and walked the woman through the best route, even marking the stops on her paper map. "The 47 bus comes every 15 minutes, and it'll drop you right at the station entrance."
+Maya pulled up the transit app on her Fairphone and walked the woman through the best route, even marking the stops on her paper map. "The 47 bus comes every 15 minutes, and it'll drop you right at the station entrance."
 
 "You're so kind, thank you! Are you on lunch break from school?"
 

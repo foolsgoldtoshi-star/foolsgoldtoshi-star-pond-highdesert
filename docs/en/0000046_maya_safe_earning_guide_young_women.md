@@ -4,7 +4,7 @@
 
 ---
 
-Hey amazing young women! Maya here with something close to my heart. After building Faeb with Alex, I realized how much my ThinkPad laptop has enabled my creative freedom. But not everyone starts with the resources I had, and that's not fair - especially for brilliant girls who have incredible ideas but lack the tools to bring them to life.
+Hey amazing young women! Maya here with something close to my heart. After building Faeb with Alex, I realized how much my Framework laptop has enabled my creative freedom. But not everyone starts with the resources I had, and that's not fair - especially for brilliant girls who have incredible ideas but lack the tools to bring them to life.
 
 This guide is for you if you're determined to earn your own laptop through safe, nurturing work that honors your intelligence and creativity. You've got this, and I believe in you. 💖
 
@@ -200,4 +200,4 @@ You've got this, future Guardian Dragons. The world needs your creativity and yo
 
 ---
 
-**Guardian Dragon PBC Navigation**: [← Previous: Maya & Alex Collaboration](0000045_maya_alex_first_collaborative_music_tech_project.md) | [Next: NixOS Installation Sacred Guide →](0000047_nixos_thinkpad_installation_meditation_guide.md) | [Advanced Relaxation →](0000042_firas_zahabi_advanced_sovereign_relaxation.md)
+**Guardian Dragon PBC Navigation**: [← Previous: Maya & Alex Collaboration](0000045_maya_alex_first_collaborative_music_tech_project.md) | [Next: NixOS Framework Installation Guide →](0000047_nixos_framework_laptop_installation_meditation_guide.md) | [Advanced Relaxation →](0000042_firas_zahabi_advanced_sovereign_relaxation.md)

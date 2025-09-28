@@ -1,4 +1,4 @@
-# NixOS Installation Meditation Guide 🧘‍♀️💻
+# NixOS Framework Laptop Installation Guide 🧘‍♀️💻
 
 *"Meditation is a surrender to the present moment. When you are totally here and now, action happens through you, not by you." - Osho*
 
@@ -56,7 +56,7 @@ Create a sacred workspace for technical meditation:
 ### **Phase 1: Entering Sacred Technical Space (10 minutes)**
 
 **🔌 Power On Ritual:**
-1. Hold your ThinkPad with gratitude for its faithful service
+1. Hold your Framework laptop with gratitude for its faithful service
 2. Power on while setting intention for pure, reproducible computing
 3. Enter BIOS/UEFI with reverence for the hardware-software interface
 4. Configure boot settings mindfully - secure boot off, UEFI mode enabled
@@ -105,7 +105,7 @@ This file is your digital DNA - approach it with reverence:
   boot.loader.efi.canTouchEfiVariables = true;
   
   # Networking with intention
-  networking.hostName = "maya-thinkpad"; # Choose a meaningful name
+  networking.hostName = "maya-framework"; # Choose a meaningful name
   networking.networkmanager.enable = true;
   
   # Time and location awareness  
@@ -241,7 +241,7 @@ nix-store --optimize               # Optimize storage mindfully
 ### **Common Challenges and Mindful Solutions:**
 
 **🌐 WiFi Driver Issues:**
-- Research your ThinkPad's WiFi chip model before installation
+- Research your Framework laptop's WiFi chip model before installation
 - Download necessary firmware to USB stick beforehand  
 - Use ethernet connection temporarily if wireless doesn't work initially
 - Remember: hardware support improves with each NixOS release
@@ -253,7 +253,7 @@ nix-store --optimize               # Optimize storage mindfully
 - Test different drivers with patience - graphics are complex
 
 **📱 Hardware Function Keys:**
-- ThinkPad function keys (brightness, volume) may need specific configuration
+- Framework laptop function keys (brightness, volume) may need specific configuration
 - Research your specific model's nixos-hardware configuration
 - Community wiki has model-specific guidance
 - Many issues resolve with subsequent system updates
@@ -300,7 +300,7 @@ As Maya completes her NixOS installation and reflects on this milestone in her t
 **Community collaboration** supports **shared knowledge**
 **Sustainable practices** build **long-term capability**
 
-Her ThinkPad is no longer just a laptop - it's a sacred tool configured to serve her highest creative potential while connecting her to a global community of technologists who share her values of openness, sustainability, and mutual support.
+Her Framework laptop is no longer just a laptop - it's a sacred tool configured to serve her highest creative potential while connecting her to a global community of technologists who share her values of openness, sustainability, and mutual support.
 
 Tomorrow, Maya will begin exploring the vast ecosystem of NixOS packages and development environments, with dreams of making Faeb even more elegant using advanced ClojureScript features and expanding into epub generation for educational content. But tonight, she rests in the satisfaction of having created a computing foundation that perfectly supports AI-assisted functional programming and serves her storytelling platform's creative goals.
 
