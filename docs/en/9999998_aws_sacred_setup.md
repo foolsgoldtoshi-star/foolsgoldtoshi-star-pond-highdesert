@@ -38,7 +38,7 @@ Before beginning AWS work, ensure your TailsOS environment is properly configure
 
 1. **Persistent Storage enabled** - Your SSH keys and development tools saved securely
 2. **Terminal access verified** - Full command line capabilities in GNOME environment  
-3. **Tor connection stable** - All cloud access protected through encrypted routing
+3. **Encrypted connection stable** - All cloud access protected through secure routing
 4. **SSH key generation** - Ed25519 keys created and stored in persistent storage
 5. **Development tools installed** - Git, text editors, and AWS CLI in persistent apps
 

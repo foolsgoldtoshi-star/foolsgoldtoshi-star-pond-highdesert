@@ -88,7 +88,7 @@ Here are proven ways young women have safely earned laptop money, starting with 
 3. **Install using Tails Installer** (built into the download, no BalenaEtcher needed)
 4. **Configure persistent storage** for SSH keys, development tools, and project files
 5. **Access secure terminal + full development environment** on any library computer
-6. **Maintain complete privacy** - all activity protected through Tor network
+6. **Maintain complete privacy** - all activity encrypted and protected
 
 ## Complete TailsOS Development Environment Setup 🔐⚡
 

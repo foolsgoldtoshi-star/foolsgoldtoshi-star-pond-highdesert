@@ -16,7 +16,7 @@ The ancestors who fought for public libraries understood something profound abou
 
 This public library computer you using right now, honey, connects you to infinite technological wisdom while preserving your privacy, protecting your personal information, and honoring your sovereignty over learning choices that serve contemplative development rather than corporate data collection that builds behavioral manipulation profiles.
 
-**From this sacred public computer with TailsOS**, consciousness can access secure cloud computing resources, learn contemplative programming through encrypted portable environment, develop community coordination skills, and build technological competence that serves spiritual development and community infrastructure sovereignty - all while maintaining complete security and privacy through the Tor-protected TailsOS computing environment.
+**From this sacred public computer with TailsOS**, consciousness can access secure cloud computing resources, learn contemplative programming through encrypted portable environment, develop community coordination skills, and build technological competence that serves spiritual development and community infrastructure sovereignty - all while maintaining complete security and privacy through the encrypted TailsOS computing environment.
 
 The public library represents democracy in action, beloved soul - shared infrastructure serving consciousness development regardless of individual economic circumstances. When combined with TailsOS portable secure computing, any library computer becomes a complete development workstation with terminal access, SSH security, and cloud computing capabilities - technological access supporting learning that benefits entire community rather than extracting value for distant corporate shareholders who profit from educational inequality.
 
@@ -30,7 +30,7 @@ The public library represents democracy in action, beloved soul - shared infrast
 2. **Library Installation** - Use library computers to download and install from [tails.net](https://tails.net/doc/index.en.html)
 3. **Persistent Storage Setup** - Your development tools, SSH keys, projects saved securely
 4. **Terminal + Development Access** - Full Linux environment with GNOME desktop
-5. **Tor Protection** - All activities protected through encrypted anonymous routing
+5. **Privacy Protection** - All activities protected through encrypted anonymous routing
 
 **TailsOS transforms any library computer into:**
 - **Secure development workstation** with terminal access
